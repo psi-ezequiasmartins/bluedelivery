@@ -1,13 +1,16 @@
-# Dependencies
-node_modules/
+# Dependencies (ignora em qualquer nível)
+**/node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
 
-# Environment variables
-.env
-.env.local
-.env.production
+# Environment variables (ignora em qualquer nível)
+**/.env
+**/.env.local
+**/.env.production
+**/.env.development
 
 # APK files
 *.apk
