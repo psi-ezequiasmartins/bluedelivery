@@ -1,0 +1,8 @@
+.delivery {
+  background-color: #FFF;
+  min-height: 100px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(87, 86, 86);
+  padding: 45px;
+}

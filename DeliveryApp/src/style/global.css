@@ -1,0 +1,269 @@
+/** src/style/global.css */
+
+body {
+  margin: 0;
+  font-family: "Arial", "Helvetica", "Calibri", "Segoe UI", "Roboto", "Ubuntu", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Consolas", sans-serif, 
+  -apple-system, BlinkMacSystemFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+  background: #FFF;
+}
+
+code {
+  font-family: "Arial", "Helvetica", "Calibri", "Consolas", "Courier New", monospace;
+}
+
+h1, h2, h3, h5 {
+  line-height: 1.5;
+}
+
+h4 {
+  color: orange;
+  line-height: 1.5;
+}
+
+p {
+  color: #8B8B8B;
+}
+a {
+  text-decoration: none;
+}
+.navbar {
+  background-color: darkslategrey;
+}
+
+/* BANNER PRINCIPAL */
+
+#banner {
+  background-color: #323338;
+  color: white;
+  padding: 80px 0 100px 0;
+}
+#banner img {
+  width: 100%;
+}
+.bloco {
+  display: table-cell;
+  vertical-align: middle;
+  height:400px;
+}
+.btn-app {
+  margin: 2% 2% 5% 0;
+}
+
+/* VANTAGENS */
+
+#vantagens {
+padding: 10% 10%;
+}
+.vermelho {
+  color: red;
+}
+.azul {
+  color: #0D6EFD;
+}
+.verde {
+  color: teal;
+}
+.box{
+  text-align: center;
+  padding: 5%;
+}
+.icon {
+  margin-bottom: 5px;
+}
+
+/* DEPOIMENTOS */
+
+#depoimentos {
+  background-color: white;
+  font-style: italic;
+  font-size: 18px;
+  color: #323338;
+  padding: 20% 15%;
+  text-align: center;
+}
+#depoimentos img {
+  border-radius: 50%;
+  width: 10%;
+  margin: 20px;
+}
+
+/* PLANOS E PREÇOS */
+
+#planos-e-precos {
+  padding: 5% 0% 15%;
+  color: #323338;
+}
+#planos-e-precos .titulo {
+  margin-top: 5%;
+}
+#planos-e-precos .card {
+  margin-top: 5%;
+}
+
+/* MOBILE */
+
+#mobile {
+  background-color: #323338;
+  color: white;
+  padding: 80px 0 100px 0;
+}
+#mobile img {
+  width: 100%;
+}
+
+/* CONTATO (RODAPÉ) */
+
+#contato {
+  padding: 3% 15%;
+  text-align: center;
+  background-color: #000;
+}
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display:none;
+}
+.footer-links {
+  color: white;
+}
+
+/*
+ :root {
+  --telegram-icon-color: #fff;
+  --telegram-icon-hover: #fff;
+  --telegram-background-color: #0060ff;
+  --telegram-background-hover: #0044b3;
+  --whatsapp-icon-color: #fff;
+  --whatsapp-icon-hover: #000;
+  --whatsapp-background-color: #00c800;
+  --whatsapp-background-hover: #009600;
+}
+*/
+/* botão flutuante Telegram */
+/*
+.telegram-icon {
+  width: 50px;
+  height: 50px;
+  transform: scale(0.7) translate(20%, 30%);
+  fill: var(--whatsapp-icon-color)
+}
+.telegram-float {
+  position: fixed;
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+  right: 100px;
+  bottom: 20px;
+  transition: 1s;
+  background-color: var(--telegram-background-color);
+  border-radius: 50px;
+  animation: t-pulse 3s infinite;
+  -webkit-animation: t-pulse 3s infinite;
+  -moz-animation: t-pulse 3s infinite;
+  -o-animation: t-pulse 3s infinite;
+  z-index: 9000
+}
+.telegram-float:hover {
+  background-color: var(--telegram-background-hover)
+}
+.telegram-float:hover .telegram-icon {
+  fill: var(--telegram-icon-hover)
+}
+
+@keyframes t-pulse {
+  0% {-webkit-box-shadow: 0 0 0 0 rgba(0, 96, 255, 1)}
+  70% {-webkit-box-shadow: 0 0 0 20px rgba(0, 96, 255, 0)}
+  100% {-webkit-box-shadow: 0 0 0 0 rgba(0, 96, 255, 0)}
+}
+@-webkit-keyframes t-pulse {
+  0% {-webkit-box-shadow: 0 0 0 0 rgba(0, 96, 255, 1)}
+  70% {-webkit-box-shadow: 0 0 0 20px rgba(0, 96, 255, 0)}
+  100% {-webkit-box-shadow: 0 0 0 0 rgba(0, 96, 255, 0)}
+}
+@-moz-keyframes t-pulse {
+  0% {-webkit-box-shadow: 0 0 0 0 rgba(0, 96, 255, 1)}
+  70% {-webkit-box-shadow: 0 0 0 20px rgba(0, 96, 255, 0)}
+  100% {-webkit-box-shadow: 0 0 0 0 rgba(0, 96, 255, 0)}
+}
+@-o-keyframes t-pulse {
+  0% {-webkit-box-shadow: 0 0 0 0 rgba(0, 96, 255, 1)}
+  70% {-webkit-box-shadow: 0 0 0 20px rgba(0, 96, 255, 0)}
+  100% {-webkit-box-shadow: 0 0 0 0 rgba(0, 96, 255, 0)}
+} */
+
+/*botao flutuante WhatsApp*/
+/* .whatsapp-icon {
+  width: 50px;
+  height: 50px;
+  transform: scale(0.8) translate(22%, 20%);
+  fill: var(--whatsapp-icon-color)
+}
+.whatsapp-float {
+  position: fixed;
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+  right: 180px;
+  bottom: 20px;
+  transition: 1s;
+  background-color: var(--whatsapp-background-color);
+  border-radius: 50px;
+  animation: w-pulse 3s infinite;
+  -webkit-animation: w-pulse 3s infinite;
+  -moz-animation: w-pulse 3s infinite;
+  -o-animation: w-pulse 3s infinite;
+  z-index: 99999
+}
+.whatsapp-float:hover {
+  background-color: var(--whatsapp-background-hover)
+}
+.whatsapp-float:hover .whatsapp-icon {
+  fill: var(--whatsapp-icon-hover)
+}
+
+@keyframes w-pulse {
+  0% { -webkit-box-shadow: 0 0 0 0 rgba(0, 200, 0, 1) }
+  70% { -webkit-box-shadow: 0 0 0 20px rgba(0, 200, 0, 0) }
+  100% { -webkit-box-shadow: 0 0 0 0 rgba(0, 200, 0, 0) }
+}
+@-webkit-keyframes w-pulse {
+  0% { -webkit-box-shadow: 0 0 0 0 rgba(0, 200, 0, 1) }
+  70% { -webkit-box-shadow: 0 0 0 20px rgba(0, 200, 0, 0) }
+  100% { -webkit-box-shadow: 0 0 0 0 rgba(0, 200, 0, 0) }
+}
+@-o-keyframes w-pulse {
+  0% { -webkit-box-shadow: 0 0 0 0 rgba(0, 200, 0, 1) }
+  70% { -webkit-box-shadow: 0 0 0 20px rgba(0, 200, 0, 0) }
+  100% { -webkit-box-shadow: 0 0 0 0 rgba(0, 200, 0, 0) }
+}
+@-ms-keyframes w-pulse {
+  0% { -webkit-box-shadow: 0 0 0 0 rgba(0, 200, 0, 1) }
+  70% { -webkit-box-shadow: 0 0 0 20px rgba(0, 200, 0, 0) }
+  100% { -webkit-box-shadow: 0 0 0 0 rgba(0, 200, 0, 0) }
+}
+@-moz-keyframes w-pulse {
+  0% { -webkit-box-shadow: 0 0 0 0 rgba(0, 200, 0, 1) }
+  70% { -webkit-box-shadow: 0 0 0 20px rgba(0, 200, 0, 0) }
+  100% { -webkit-box-shadow: 0 0 0 0 rgba(0, 200, 0, 0) }
+} 
+*/
+
+/* SweetAlert2 */
+/* 
+.swal2-container, .swal2-input, .swal2-file, .swal2-textarea {
+  box-sizing: border-box;
+  width: auto;
+  transition: border-color .1s,box-shadow .1s;
+  border: 1px solid #333;
+  border-radius: .1875em;
+  background: rgba(0,0,0,3);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.06),0 0 0 3px rgba(0, 0, 0, 0);
+  color: #FFF;
+  font-size: 1.125em;
+} 
+*/

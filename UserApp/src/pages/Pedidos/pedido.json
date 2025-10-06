@@ -1,0 +1,32 @@
+{
+  "CLIENTE_NOME": "Ezequias Martins",
+  "DATA": "04/10/2025 22:11:35",
+  "DELIVERY_ENDERECO": "Rua dos Bororós, 629 Santa Mônica, Belo Horizonte, MG,  ,  ,  , -,  ",
+  "DELIVERY_ID": 1003,
+  "DELIVERY_IMG": "https: //firebasestorage.googleapis.com/v0/b/psi-crm-ca846.appspot.com/o/deliverys%2Fhotdogdamaria.jpg?alt=media&token=93d46c8d-abe3-4008-aa2d-c9a81a6c23fb",
+  "DELIVERY_NOME": "Hotdog da Maria",
+  "DELIVERY_TELEFONE": "+55 31 9999-9999",
+  "ENDERECO_ENTREGA": "Rua Júlio Dias, 74, Providência, Minas Gerais, 31814-240",
+  "ITENS": [
+    {
+      "ACRESCIMOS": [],
+      "ITEM_ID": 117,
+      "OBS": "",
+      "PRODUTO": "Hot Dog Tradicional",
+      "QTD": 1,
+      "TOTAL": 17,
+      "URL_IMAGEM": "https://firebasestorage.googleapis.com/v0/b/psi-crm-ca846.appspot.com/o/produtos%2Fhotdog-1.png?alt=media&token=63055b8f-b826-4f23-9348-0649a92c0738",
+      "VR_ACRESCIMOS": 2.5,
+      "VR_UNITARIO": 14.5
+    }
+  ],
+  "LATITUDE": -19.850753,
+  "LONGITUDE": -43.9249654,
+  "PEDIDO_ID": 1088,
+  "PUSH_TOKEN": "ExponentPushToken[NORKdoBG3OuOFfyf3Ma6i3]",
+  "STATUS": "NOVO",
+  "TAXA_ENTREGA": 3.5,
+  "TELEFONE": "(31) 98410-7540",
+  "VR_SUBTOTAL": 17,
+  "VR_TOTAL": 20.5
+}

@@ -1,0 +1,74 @@
+/**
+ * DeliveryListItem.js
+ */
+
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { isDevelopment } from "../../config/apiAxios";
+
+export default function DeliveryListItem({ item, selectItem }) {
+  const produto = item;
+
+  return (
+    <TouchableOpacity 
+      onPress={ () => {
+        if (isDevelopment) {
+          console.log('Item selecionado:', produto);
+        }
+        selectItem(produto);
+      }} 
+      style={ styles.container }
+    >
+      <View style={{ flex: 1 }}>
+        <Text style={ styles.name }>{ produto?.PRODUTO_NOME }</Text>
+        <Text style={ styles.description } numberOfLines={ 3 }>
+          { produto?.DESCRICAO }
+        </Text>
+        <Text style={ styles.price }>
+          R$ { (produto?.VR_UNITARIO > 0) ? parseFloat(produto?.VR_UNITARIO).toFixed(2) : "0,00" }
+        </Text>
+      </View>
+      <Image 
+        style={ styles.image } 
+        source={{
+          uri:(produto?.URL_IMAGEM === "" ? "https://via.placeholder.com/500x500" : produto.URL_IMAGEM)
+        }} 
+      />
+    </TouchableOpacity>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    paddingVertical: 10,
+    marginHorizontal: 10,
+    borderBottomColor: "lightgrey",
+    borderBottomWidth: 1,
+    flexDirection: "row",
+  },
+  name: {
+    fontWeight: "600",
+    fontSize: 16,
+    letterSpacing: 0.5,
+    color: "#FFF",
+  },
+  description: {
+    color: "#FFF",
+    marginVertical: 5,
+  },
+  price: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginTop: 5,
+    color: "#FFcc00",
+  },
+  image: {
+    width: 120,
+    height: 120,
+    marginLeft: 10,
+    padding: 5,
+    borderRadius: 8,
+    aspectRatio: 1,
+    borderWidth: 0.5,
+    borderColor: 'black',
+  },
+});

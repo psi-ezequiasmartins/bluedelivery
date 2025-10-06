@@ -1,0 +1,31 @@
+{
+  "users": {
+    "0RVia9cWhURHsTNyWD4bdoG48o82": {
+      "DeliverName": "Delivery Bairro",
+      "DeliveryID": 9999,
+      "DeliveryMail": "deliverybairro@psidelivery.com",
+      "Email": "admin@psidelivery.com",
+      "Nome": "Super",
+      "Sobrenome": "Admin",
+      "Telefone": "(31) 98410-7540",
+      "UserID": 999997
+    },
+    "9R4I2cVYDRRgtGu6CbfXMVre4972": {
+      "DeliveryID": 1002,
+      "DeliveryMail": "sandubadoze@email.com",
+      "DeliveryName": "Sanduba do Zé",
+      "Email": "zedascouves@email.com",
+      "Nome": "Zé",
+      "Sobrenome": "das Couves",
+      "Telefone": "(31) 98410-7540",
+      "UserID": 999990
+    },
+    "x1OFq9mZLjWLBYSe37EksjjEzVd2": {
+      "Email": "ezequiasmartins@gmail.com",
+      "Nome": "Ezequias",
+      "Sobrenome": "Martins",
+      "Telefone": "(31) 98410-7540",
+      "UserID": 100001
+    }
+  }
+}

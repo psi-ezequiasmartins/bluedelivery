@@ -1,0 +1,12 @@
+.search{
+  max-width: 400px;
+  height: 40px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  width: 100%;
+}

@@ -1,0 +1,40 @@
+[
+    {
+        "type": "header",
+        "version": "5.0.4",
+        "comment": "Export to JSON plugin for PHPMyAdmin"
+    },
+    {
+        "type": "database",
+        "name": "deliverybairro"
+    },
+    {
+        "type": "table",
+        "name": "usuarios",
+        "database": "deliverybairro",
+        "data": [
+            {
+                "USER_ID": "100001",
+                "FIREBASE_UID": "x1OFq9mZLjWLBYSe37EksjjEzVd2",
+                "NOME": "Ezequias",
+                "SOBRENOME": "Martins",
+                "TELEFONE": "(31) 98410-7540",
+                "EMAIL": "ezequiasmartins@gmail.com",
+                "SENHA": "*1A030512019B7B4B97167D5515EBB6C7105EB12F",
+                "URL_IMAGEM": "https:\/\/placeholder.go\/300x240",
+                "CHAVE": "1"
+            },
+            {
+                "USER_ID": "999999",
+                "FIREBASE_UID": "BFyauNcPX8VnspEi3wmXMZF7wGH3",
+                "NOME": "Zé ",
+                "SOBRENOME": "das Couves",
+                "TELEFONE": "(31) 98410-7540",
+                "EMAIL": "zedascouves@email.com",
+                "SENHA": "*600FE53B55C3FAE8A9FCAB8060125364879C08E3",
+                "URL_IMAGEM": "file:\/\/\/data\/user\/0\/com.deliverybairro.userapp\/cache\/ImagePicker\/0d9d75aa-4a93-402e-b25d-44f24a3f94cc.jpeg",
+                "CHAVE": "1"
+            }
+        ]
+    }
+]
