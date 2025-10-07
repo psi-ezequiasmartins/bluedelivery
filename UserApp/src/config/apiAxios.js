@@ -7,10 +7,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { BASE_URL, NODE_ENV } from '@env';
 
 const isDevelopment = NODE_ENV === 'development';
-  
+
 if (isDevelopment) console.log('Ambiente de desenvolvimento detectado. Habilitando logs detalhados.');
 
-const API_URL =  (BASE_URL || 'https://srv.deliverybairro.com').replace(/^"(.*)"$/, '$1');
+const API_URL = (BASE_URL || 'https://server.bluedelivery.tech').replace(/^"(.*)"$/, '$1');
 
 if (isDevelopment) console.log('URL da API:', API_URL);
 
