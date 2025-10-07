@@ -1,4 +1,4 @@
-## DeliveryBairro.com (Aplicação Web)
+## Blue Delivery (Aplicação Web)
 
 <img src="src/assets/banner.jpg" width="70%"><br>
 

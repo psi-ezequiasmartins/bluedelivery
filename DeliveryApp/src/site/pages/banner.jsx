@@ -34,11 +34,11 @@ function Banner() {
         <div className="row align-items-center">
 
           <div className="col-lg-6">
-            <img src={banner} className="img-fluid" alt="deliverybairro.com"/>
+            <img src={banner} className="img-fluid" alt="blue delivery" />
           </div>
           <div className="col-lg-6">
             <div className="bloco">
-              <h1>Simples de configurar <br/>e fácil de usar!</h1>
+              <h1>Simples de configurar <br />e fácil de usar!</h1>
               <div className={`${fade ? 'fade-in' : 'fade-out'}`}>
                 <h4>{texts[index]}</h4>
               </div>
