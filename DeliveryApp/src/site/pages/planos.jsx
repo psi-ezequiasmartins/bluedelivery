@@ -51,7 +51,7 @@ function Planos() {
 
   function Cadastrar() {
     if (nome === "" || responsavel === "" || email === "") {
-      setMsg('Favor preencher todos os campos obrigatórios marcados com (*).');
+      setMsg(t('plans.form.error_required'));
     } else {
       const info = {
         "DeliveryID": null,
@@ -79,7 +79,7 @@ function Planos() {
         localStorage.setItem("email", response.data.Email);
         sendMail();
       }).then(() => {
-        setMsg('Delivery cadastrado com sucesso!');
+        setMsg(t('plans.form.success'));
         setSuccess('S');
       }).catch((error) => {
         setMsg(error.message);
@@ -178,28 +178,28 @@ function Planos() {
                     <div className="col-9">
                       <label htmlFor="plano" className="form-label">{t('plans.form.plan')}</label>
                       <select onChange={e => setPlanoAssinatura(e.target.value)} className="form-select" id="plano">
-                        <option value="BASIC">Plano Free | Até 10 produtos (incluindo bebidas): Taxa de Adesão: R$ 0,00 + 0,99 por pedido</option>
-                        <option value="PRO">Plano Pro | Até 30 produtos (incluindo bebidas): Taxa de Adesão R$ 79,90 + 0,99 por pedido</option>
-                        <option value="PREMIUM">Plano Premium | Até 50 Produtos (incluindo bebidas): Taxa de Adesão R$ 579,90 + 0,99 por pedido</option>
+                        <option value="BASIC">{t('plans.form.plans.basic')}</option>
+                        <option value="PRO">{t('plans.form.plans.pro')}</option>
+                        <option value="PREMIUM">{t('plans.form.plans.premium')}</option>
                       </select>
                       <input onChange={e => setSituacao(e.target.value)} type="hidden" id="status" name="status" value="ATIVO" />
                       <input onChange={e => setUrlImagem(e.target.value)} type="hidden" id="urlimagem" name="urlimagem" value="" />
                     </div>
                     <div className="col-3">
-                      <label htmlFor="categoria" className="form-label">Categoria do Delivery</label>
+                      <label htmlFor="categoria" className="form-label">{t('plans.form.category')}</label>
                       <select onChange={e => setCategoria(e.target.value)} className="form-select" id="categoria">
-                        <option value="101">OFERTAS</option>
-                        <option value="102">SANDUICHES</option>
-                        <option value="103">HOTDOGS</option>
-                        <option value="104">BEBIDAS</option>
-                        <option value="105">PRATOS E PORÇÕES</option>
-                        <option value="106">SUSHI</option>
-                        <option value="107">FRUTAS E VERDURAS</option>
-                        <option value="108">MEDICAMENTOS</option>
-                        <option value="109">GÁS DE COZINHA</option>
-                        <option value="110">FLORICULTURA</option>
-                        <option value="111">ÁGUA MINERAL</option>
-                        <option value="112">MERCADO</option>
+                        <option value="101">{t('plans.form.categories.101')}</option>
+                        <option value="102">{t('plans.form.categories.102')}</option>
+                        <option value="103">{t('plans.form.categories.103')}</option>
+                        <option value="104">{t('plans.form.categories.104')}</option>
+                        <option value="105">{t('plans.form.categories.105')}</option>
+                        <option value="106">{t('plans.form.categories.106')}</option>
+                        <option value="107">{t('plans.form.categories.107')}</option>
+                        <option value="108">{t('plans.form.categories.108')}</option>
+                        <option value="109">{t('plans.form.categories.109')}</option>
+                        <option value="110">{t('plans.form.categories.110')}</option>
+                        <option value="111">{t('plans.form.categories.111')}</option>
+                        <option value="112">{t('plans.form.categories.112')}</option>
                       </select>
                     </div>
                   </div>
@@ -209,16 +209,16 @@ function Planos() {
                   </div>
                   <div className="row mb-2">
                     <div className="col-8">
-                      <label htmlFor="email" className="form-label">E-mail<font color="#FF0000">*</font></label>
+                      <label htmlFor="email" className="form-label">{t('plans.form.email')}<font color="#FF0000">*</font></label>
                       <input onChange={e => setEmail(e.target.value)} type="email" className="form-control" id="email" />
                     </div>
                     <div className="col-4">
-                      <label htmlFor="telefone" className="form-label">Telefone</label>
+                      <label htmlFor="telefone" className="form-label">{t('plans.form.phone')}</label>
                       <input onChange={e => setTelefone(e.target.value)} type="text" className="form-control" id="telefone" />
                     </div>
                   </div>
                   <div className="mb-2">
-                    <label htmlFor="horario" className="form-label">Horário de Funcionamento</label>
+                    <label htmlFor="horario" className="form-label">{t('plans.form.schedule')}</label>
                     <input onChange={e => setHorario(e.target.value)} type="text" className="form-control" id="horario" />
                   </div>
                   <input onChange={e => setMinDeliverTime(e.target.value)} type="hidden" id="mindeliverytime" name="mindeliverytime" value="15" />
@@ -226,13 +226,13 @@ function Planos() {
                   <input onChange={e => setRating(e.target.value)} type="hidden" id="rating" name="rating" value="4.9" />
                   <input onChange={e => setTaxaEntrega(e.target.value)} type="hidden" id="taxaentrega" name="taxaentrega" value="5" />
                   <div className="mb-2">
-                    <label htmlFor="endereco" className="form-label">Endereço completo</label>
+                    <label htmlFor="endereco" className="form-label">{t('plans.form.address')}</label>
                     <input onChange={e => setEndereco(e.target.value)} type="text" className="form-control" id="endereco" />
                     <input onChange={e => setLatitude(e.target.value)} type="hidden" id="latitude" name="latitude" value="-19.999999" />
                     <input onChange={e => setLongitude(e.target.value)} type="hidden" id="longitude" name="longitude" value="-43.999999" />
                   </div>
                   <div className="mb-2">
-                    <p>(*) Campos obrigatórios! Após o envio, você receberá em seu e-mail instruções para concluirmos a sua assinatura e criar o seu login de acesso.</p>
+                    <p>{t('plans.form.required_fields')}</p>
                   </div>
                   <input onChange={e => setPushToken(e.target.value)} type="hidden" id="pushToken" name="pushToken" value="" />
                 </div>
@@ -242,8 +242,8 @@ function Planos() {
             </div>
 
             <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
-              <button type="button" className="btn btn-success" data-bs-dismiss="modal" onClick={Cadastrar}>ENVIAR PRÉ-CADASTRO</button>
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">{t('plans.form.cancel')}</button>
+              <button type="button" className="btn btn-success" data-bs-dismiss="modal" onClick={Cadastrar}>{t('plans.form.send')}</button>
             </div>
 
           </div>

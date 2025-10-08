@@ -3,6 +3,7 @@
  */
 
 import React, { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import InputMask from 'react-input-mask';
 import Menu from "../../../components/menu";
 import './index.css';
@@ -10,6 +11,7 @@ import './index.css';
 import api from "../../../config/apiAxios";
 
 function Delivery() {
+  const { t } = useTranslation();
   const vDelivery = localStorage.getItem("vDelivery");
   const vID = localStorage.getItem("vID");
 
@@ -109,37 +111,37 @@ function Delivery() {
       // Pré-cadastro de novo delivery
       await api.post('/delivery-app/delivery/pre-cadastro', jsonData)
         .then((response) => {
-          setMsg({ text: 'Pré-cadastro realizado com sucesso!', type: 0 });
+          setMsg({ text: t('app.delivery.messages.pre_register_success'), type: 0 });
           // Se backend retornar o novo ID, pode salvar no localStorage
           if (response.data?.DELIVERY_ID) {
             localStorage.setItem('vID', response.data.DELIVERY_ID);
           }
         })
         .catch((error) => {
-          setMsg({ text: 'Erro no pré-cadastro: ' + error, type: 1 });
+          setMsg({ text: t('app.delivery.messages.pre_register_error') + error, type: 1 });
         });
     } else {
       // Atualização de delivery existente
       console.log('🎯 Atualizando delivery ID:', vID);
       console.log('📦 Dados enviados:', jsonData);
-      
+
       await api.put(`/delivery-app/update/delivery/${vID}`, jsonData)
         .then((response) => {
           console.log('✅ Resposta do backend:', response.data);
-          setMsg({ text: 'Dados atualizados com sucesso!', type: 0 });
+          setMsg({ text: t('app.delivery.messages.update_success'), type: 0 });
         })
         .catch((error) => {
           console.error('💥 Erro ao atualizar delivery:', error);
           let errorMessage = 'Erro desconhecido';
-          
+
           if (error.response) {
             errorMessage = `Erro ${error.response.status}: ${error.response.data?.message || 'Erro no servidor'}`;
           } else if (error.request) {
-            errorMessage = 'Erro de conexão com o servidor';
+            errorMessage = t('app.delivery.messages.connection_error');
           } else {
             errorMessage = error.message;
           }
-          
+
           setMsg({ text: errorMessage, type: 1 });
         });
     }
@@ -189,7 +191,7 @@ function Delivery() {
   useEffect(() => {
     if (msg) {
       const timer = setTimeout(() => {
-        setMsg({text: '', type: 0});
+        setMsg({ text: '', type: 0 });
       }, 3000); // Oculta a mensagem após 3 segundos
       return () => clearTimeout(timer); // Limpa o timer se o componente for desmontado
     }
@@ -206,135 +208,136 @@ function Delivery() {
         <div className="col py-3 me-3">
           <div className='shadow-sm delivery'>
 
-            <h1>DADOS DO DELIVERY</h1>
+            <h1>{t('app.delivery.title')}</h1>
 
             <form>
               <div className="row">
 
                 <div className="mb-2">
-                  <label htmlFor="delivery_nome" className="form-label">Nome do Delivery</label>
+                  <label htmlFor="delivery_nome" className="form-label">{t('app.delivery.form.delivery_name')}</label>
                   <input type="text" id="delivery_nome" name="DELIVERY_NOME" value={delivery_nome} className="form-control text-primary" onChange={e => setDeliveryNome(e.target.value)} />
                 </div>
 
                 <div className="mb-2">
-                  <label htmlFor="plano" className="form-label">Plano*</label>
+                  <label htmlFor="plano" className="form-label">{t('app.delivery.form.plan')}*</label>
                   <select id="plano" name="PLANO" value={plano} className="form-select text-primary" onChange={e => setPlanoAssinatura(e.target.value)}  >
-                    <option value="BASIC">Plano Free | Até 10 produtos (incluindo bebidas): Taxa de Adesão: R$ 0,00 + 0,99 por pedido</option>
-                    <option value="PRO">Plano Pro | Até 30 produtos (incluindo bebidas): Taxa de Adesão R$ 79,90 + 0,99 por pedido</option>
-                    <option value="PREMIUM">Plano Premium | Até 50 Produtos (incluindo bebidas): Taxa de Adesão R$ 579,90 + 0,99 por pedido</option>
+                    <option value="BASIC">{t('app.delivery.form.plans.basic')}</option>
+                    <option value="PRO">{t('app.delivery.form.plans.pro')}</option>
+                    <option value="PREMIUM">{t('app.delivery.form.plans.premium')}</option>
                   </select>
                   <input type="hidden" id="status" name="STATUS" value={situacao} onChange={e => setSituacao(e.target.value)} />
                 </div>
 
-        <div className="row text-center">
-          <div className="titulo">
-            <h1>Planos de Adesão</h1>
-            <p>Taxa de Adesão (pagamento único) a partir de R$ 89,90 (Plano PRO), <br/>escolha o plano conforme a sua necessidade:</p>
-          </div>
-        </div>
-
-        <div className="container">
-
-          <div className="row text-center">
-
-            <div className="col-lg-4">
-              <div className="card">
-                <div className="card-header">
-                  <h1>Free</h1>
+                <div className="row text-center">
+                  <div className="titulo">
+                    <h1>{t('app.delivery.plans_section.title')}</h1>
+                    <p>{t('app.delivery.plans_section.subtitle')}</p>
+                  </div>
                 </div>
-                <div className="card-body">
-                  <h2>R$ 0,00</h2>  
-                  <h5>+ R$ 0,99 por pedido</h5>
-                  <p>Até 10 produtos</p>
-                  <p>Cadastre-se grátis e venha<br/>fazer parte do nosso catálogo!<br/>Suporte Offline (por email)</p>
-                </div>
-              </div>
-            </div> 
 
-            <div className="col-lg-4">
-              <div className="card">
-                <div className="card-header">
-                  <h1>Pro</h1>
-                </div>
-                <div className="card-body">
-                  <h2>R$ 89,90</h2>  
-                  <h5>+ R$ 0,99 por pedido</h5>
-                  <p>Até 30 produtos</p>
-                  <p>Suporte Online:<br/>(Google Meet/WhatsApp) + Cardápio Online*</p>
-                </div>
-              </div>
-            </div>
+                <div className="container">
 
-            <div className="col-lg-4">
-              <div className="card">
-                <div className="card-header">
-                  <h1>Premium</h1>
-                </div>
-                <div className="card-body">
-                  <h2>R$ 489,90</h2>  
-                  <h5>+ R$ 0,99 por pedido</h5>
-                  <p>Até 50 produtos</p>
-                  <p>Suporte Online:<br/>(Google Meet/WhatsApp) + <br/>Cardápio Online* + Google Ads**</p>
-                </div>
-              </div>
-            </div>
-            <p></p>
-            <strong>(*) Cardápio Online personalizado c/ a Logo do Delivery</strong><br/>
-            <strong>(**) Campanha de Publicidade no Google Ads</strong>
-            <p>Promova o seu Delivery em sua região através da nossa campanha no Google Ads,<br/>para saber mais a respeito, entre em contato por favor.</p>
+                  <div className="row text-center">
 
-          </div>
-        </div>
+                    <div className="col-lg-4">
+                      <div className="card">
+                        <div className="card-header">
+                          <h1>{t('app.delivery.plans_section.free.title')}</h1>
+                        </div>
+                        <div className="card-body">
+                          <h2>{t('app.delivery.plans_section.free.price')}</h2>
+                          <h5>{t('app.delivery.plans_section.free.fee')}</h5>
+                          <p>{t('app.delivery.plans_section.free.products')}</p>
+                          <p>{t('app.delivery.plans_section.free.description')}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-lg-4">
+                      <div className="card">
+                        <div className="card-header">
+                          <h1>{t('app.delivery.plans_section.pro.title')}</h1>
+                        </div>
+                        <div className="card-body">
+                          <h2>{t('app.delivery.plans_section.pro.price')}</h2>
+                          <h5>{t('app.delivery.plans_section.pro.fee')}</h5>
+                          <p>{t('app.delivery.plans_section.pro.products')}</p>
+                          <p>{t('app.delivery.plans_section.pro.description')}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-lg-4">
+                      <div className="card">
+                        <div className="card-header">
+                          <h1>{t('app.delivery.plans_section.premium.title')}</h1>
+                        </div>
+                        <div className="card-body">
+                          <h2>{t('app.delivery.plans_section.premium.price')}</h2>
+                          <h5>{t('app.delivery.plans_section.premium.fee')}</h5>
+                          <p>{t('app.delivery.plans_section.premium.products')}</p>
+                          <p>{t('app.delivery.plans_section.premium.description')}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <p></p>
+                    <strong>(*) Cardápio Online personalizado c/ a Logo do Delivery</strong><br />
+                    <strong>(**) Campanha de Publicidade no Google Ads</strong>
+                    <p>Promova o seu Delivery em sua região através da nossa campanha no Google Ads,<br />para saber mais a respeito, entre em contato por favor.</p>
+
+                  </div>
+                </div>
 
                 <div className="mb-2">
-                  <label htmlFor="categoria" className="form-label">Categoria*</label>
+                  <label htmlFor="categoria" className="form-label">{t('app.delivery.form.category')}*</label>
                   <select id="categoria" name="CATEGORIA" value={categoria} className="form-select text-primary" readOnly>
-                    <option value="101">Ofertas</option>
-                    <option value="102">Sanduiches</option>
-                    <option value="103">Hotdog</option>
-                    <option value="104">Bebidas</option>
-                    <option value="105">Pratos e Porções</option>
-                    <option value="106">Sushi</option>
-                    <option value="107">Frutas e Verduras</option>
-                    <option value="108">Medicamentos</option>
-                    <option value="109">Gás de Cozinha</option>
-                    <option value="110">Floricultura</option>
-                    <option value="111">Água Mineral</option>
+                    <option value="101">{t('app.delivery.form.categories.101')}</option>
+                    <option value="102">{t('app.delivery.form.categories.102')}</option>
+                    <option value="103">{t('app.delivery.form.categories.103')}</option>
+                    <option value="104">{t('app.delivery.form.categories.104')}</option>
+                    <option value="105">{t('app.delivery.form.categories.105')}</option>
+                    <option value="106">{t('app.delivery.form.categories.106')}</option>
+                    <option value="107">{t('app.delivery.form.categories.107')}</option>
+                    <option value="108">{t('app.delivery.form.categories.108')}</option>
+                    <option value="109">{t('app.delivery.form.categories.109')}</option>
+                    <option value="110">{t('app.delivery.form.categories.110')}</option>
+                    <option value="111">{t('app.delivery.form.categories.111')}</option>
+                    <option value="112">{t('app.delivery.form.categories.112')}</option>
                   </select>
                 </div>
 
                 <div className="mb-2">
-                  <label htmlFor="responsavel" className="form-label">Responsável</label>
+                  <label htmlFor="responsavel" className="form-label">{t('app.delivery.form.responsible')}</label>
                   <input type="text" id="responsavel" name="RESPONSAVEL" value={responsavel} className="form-control text-primary" onChange={e => setResponsavel(e.target.value)} />
                 </div>
 
                 <div className="row mb-2">
                   <div className="col-8">
-                    <label htmlFor="email" className="form-label">E-mail</label>
+                    <label htmlFor="email" className="form-label">{t('app.delivery.form.email')}</label>
                     <input type="email" id="email" name="EMAIL" className="form-control text-primary" onChange={e => setEmail(e.target.value)} value={email} />
                   </div>
                   <div className="col-4">
-                    <label htmlFor="telefone" className="form-label">Telefone</label>
+                    <label htmlFor="telefone" className="form-label">{t('app.delivery.form.phone')}</label>
                     <input type="text" id="telefone" name="TELEFONE" value={telefone} className="form-control text-primary" onChange={e => handleInputPhone(e)} />
                   </div>
                 </div>
 
                 <div className="mb-2">
-                  <label htmlFor="horario" className="form-label">Horário</label>
+                  <label htmlFor="horario" className="form-label">{t('app.delivery.form.hours')}</label>
                   <input type="text" id="horario" name="HORARIO" value={horario} className="form-control text-primary" onChange={e => setHorario(e.target.value)} />
                 </div>
 
                 <div className="row mb-2">
                   <div className="col-3">
-                    <label htmlFor="mindeliverytime" className="form-label">Tempo Mín.</label>
+                    <label htmlFor="mindeliverytime" className="form-label">{t('app.delivery.form.min_time')}</label>
                     <input type="text" id="mindeliverytime" name="MIN_DELIVERY_TIME" value={min_delivery_time} className="form-control text-primary" onChange={e => setMinDeliveryTime(e.target.value)} />
                   </div>
                   <div className="col-3">
-                    <label htmlFor="maxdeliverytime" className="form-label">Tempo Máx.</label>
+                    <label htmlFor="maxdeliverytime" className="form-label">{t('app.delivery.form.max_time')}</label>
                     <input type="text" id="maxdeliverytime" name="MAX_DELIVERY_TIME" value={max_delivery_time} className="form-control text-primary" onChange={e => setMaxDeliveryTime(e.target.value)} />
                   </div>
                   <div className="col-3">
-                    <label htmlFor="rating" className="form-label">Pontuação (avaliação)*</label>
+                    <label htmlFor="rating" className="form-label">{t('app.delivery.form.rating')}*</label>
                     <select id="rating" name="RATING" value={rating} className="form-select text-primary" readOnly>
                       <option value="4.9">Ótima</option>
                       <option value="3.5">Muito Boa</option>
@@ -345,7 +348,7 @@ function Delivery() {
                     </select>
                   </div>
                   <div className="col-3">
-                    <label htmlFor="taxaentrega" className="form-label">Taxa Entrega</label>
+                    <label htmlFor="taxaentrega" className="form-label">{t('app.delivery.form.delivery_fee')}</label>
                     <input type="text" id="taxaentrega" name="TAXA_ENTREGA" value={taxa_entrega} className="form-control text-primary" onChange={e => setTaxaEntrega(e.target.value)} />
                     <input type="hidden" id="urlimagem" name="URL_IMAGEM" value={url_imagem} onChange={e => setUrlImagem(e.target.value)} />
                   </div>
@@ -353,37 +356,37 @@ function Delivery() {
 
                 <div className="row mb-2">
                   <div className="col-md-3">
-                    <label htmlFor="CEP" className="form-label">CEP</label>
+                    <label htmlFor="CEP" className="form-label">{t('app.delivery.form.cep')}</label>
                     <InputMask mask="99999-999" id="CEP" name="CEP" value={CEP} className="form-control text-primary" onChange={e => handleInputCEP(e)} />
                   </div>
                 </div>
 
                 <div className="row mb-2">
                   <div className="col-md-6">
-                    <label htmlFor="endereco" className="form-label">Endereço</label>
+                    <label htmlFor="endereco" className="form-label">{t('app.delivery.form.address')}</label>
                     <input type="text" id="endereco" name="ENDERECO" value={endereco} className="form-control text-primary" onChange={e => setEndereco(e.target.value)} />
                   </div>
                   <div className="col-md-3">
-                    <label htmlFor="numero" className="form-label">Número</label>
+                    <label htmlFor="numero" className="form-label">{t('app.delivery.form.number')}</label>
                     <input type="text" id="numero" name="NUMERO" value={numero} className="form-control text-primary" onChange={e => setNumero(e.target.value)} />
                   </div>
                   <div className="col-md-3">
-                    <label htmlFor="complemento" className="form-label">Complemento</label>
-                    <input type="text" id="complemento" name="COMPLEMENTO" value={complemento} className="form-control text-primary" onChange={e=>setComplemento(e.target.value)} />
+                    <label htmlFor="complemento" className="form-label">{t('app.delivery.form.complement')}</label>
+                    <input type="text" id="complemento" name="COMPLEMENTO" value={complemento} className="form-control text-primary" onChange={e => setComplemento(e.target.value)} />
                   </div>
                 </div>
 
                 <div className="row mb-2">
                   <div className="col-md-6">
-                    <label htmlFor="bairro" className="form-label">Bairro</label>
+                    <label htmlFor="bairro" className="form-label">{t('app.delivery.form.neighborhood')}</label>
                     <input type="text" id="bairro" name="BAIRRO" value={bairro} className="form-control text-primary" onChange={e => setBairro(e.target.value)} />
                   </div>
                   <div className="col-md-3">
-                    <label htmlFor="cidade" className="form-label">Cidade</label>
+                    <label htmlFor="cidade" className="form-label">{t('app.delivery.form.city')}</label>
                     <input type="text" id="cidade" name="CIDADE" value={cidade} className="form-control text-primary" onChange={e => setCidade(e.target.value)} />
                   </div>
                   <div className="col-md-3">
-                    <label htmlFor="UF" className="form-label">UF</label>
+                    <label htmlFor="UF" className="form-label">{t('app.delivery.form.state')}</label>
                     <input type="text" id="UF" name="UF" value={UF} className="form-control text-primary" onChange={e => setUf(e.target.value)} />
                   </div>
                 </div>
@@ -391,7 +394,7 @@ function Delivery() {
               </div>
             </form>
 
-            <button type="button" className="btn btn-dark" onClick={saveDeliveryInfo} >{!vID ? 'PRÉ-CADASTRAR DELIVERY' : 'SALVAR DADOS'}</button>
+            <button type="button" className="btn btn-dark" onClick={saveDeliveryInfo} >{t('app.delivery.form.save')}</button>
 
             {msg.text && (
               <div className={msg.type !== 0 ? "alert alert-danger" : "alert alert-info"} role="alert">

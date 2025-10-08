@@ -5,6 +5,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { AuthProvider } from './context/AuthContext';
+import { TranslateProvider } from './context/TranslateContext';
 import Rotas from './rotas';
 import './style/global.css';
 // Configuração de internacionalização
@@ -13,9 +14,11 @@ import './i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <AuthProvider>
-    <Rotas />
-  </AuthProvider>
+  <TranslateProvider>
+    <AuthProvider>
+      <Rotas />
+    </AuthProvider>
+  </TranslateProvider>
 );
 
 /*

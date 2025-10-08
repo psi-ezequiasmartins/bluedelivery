@@ -119,7 +119,31 @@
       "address": "Complete Address",
       "required_fields": "(*) Required fields! After submission, you will receive instructions in your email to complete your subscription and create your access login.",
       "submit": "Submit Request",
-      "modal_title": "REGISTER YOUR DELIVERY FOR FREE!"
+      "modal_title": "REGISTER YOUR DELIVERY FOR FREE!",
+      "category": "Delivery Category",
+      "cancel": "CANCEL",
+      "send": "SEND PRE-REGISTRATION",
+      "success": "Delivery registered successfully!",
+      "error_required": "Please fill in all required fields marked with (*).",
+      "plans": {
+        "basic": "Free Plan | Up to 10 products (including drinks): Membership Fee: $0.00 + $0.99 per order",
+        "pro": "Pro Plan | Up to 30 products (including drinks): Membership Fee $79.90 + $0.99 per order",
+        "premium": "Premium Plan | Up to 50 products (including drinks): Membership Fee $579.90 + $0.99 per order"
+      },
+      "categories": {
+        "101": "OFFERS",
+        "102": "SANDWICHES",
+        "103": "HOT DOGS",
+        "104": "BEVERAGES",
+        "105": "DISHES & PORTIONS",
+        "106": "SUSHI",
+        "107": "FRUITS & VEGETABLES",
+        "108": "MEDICINES",
+        "109": "COOKING GAS",
+        "110": "FLORICULTURE",
+        "111": "MINERAL WATER",
+        "112": "MARKET"
+      }
     }
   },
   "mobile": {
@@ -210,6 +234,130 @@
       "image": "Image",
       "extras": "Allow Extras",
       "observations": "Allow Observations"
+    },
+    "extras": {
+      "title": "Extra Items",
+      "new_item": "NEW EXTRA ITEM",
+      "pdf": "PDF",
+      "search_placeholder": "Extra item",
+      "no_items": "No extra items registered for this delivery.",
+      "error_loading": "Error loading extra items. Please try again later.",
+      "table": {
+        "id": "ID",
+        "item": "EXTRA ITEM",
+        "unit_price": "UNIT PRICE",
+        "actions": "ACTIONS"
+      },
+      "form": {
+        "new_title": "NEW EXTRA ITEM",
+        "edit_title": "EDIT EXTRA ITEM",
+        "description": "Description",
+        "unit_price": "Unit Price",
+        "cancel": "CANCEL",
+        "save": "SAVE",
+        "close": "Close"
+      },
+      "messages": {
+        "description_required": "Please fill in the Description field.",
+        "price_invalid": "Please fill in the Unit Price field with a valid number.",
+        "created_success": "Extra item successfully registered!",
+        "updated_success": "Extra item successfully updated!",
+        "validation_error": "Validation error: Please check the entered data.",
+        "server_error": "Server error: Could not process the request.",
+        "unknown_error": "Unknown error: Please try again later.",
+        "not_found": "Extra item not found.",
+        "load_error": "Error loading extra item: "
+      },
+      "delete": {
+        "title": "Deletion",
+        "confirm": "Confirm deletion of {{item}} ?",
+        "deleted_title": "Deleted!",
+        "deleted_text": "Extra item removed.",
+        "cancelled_title": "Cancelled",
+        "cancelled_text": "Extra item deletion was cancelled."
+      },
+      "pdf_generation": {
+        "no_items_title": "Warning",
+        "no_items_text": "There are no extra items registered to generate the PDF.",
+        "error_title": "Error",
+        "error_text": "Could not generate PDF. Please try again later."
+      }
+    },
+    "delivery": {
+      "title": "DELIVERY DATA",
+      "form": {
+        "delivery_name": "Delivery Name",
+        "plan": "Plan",
+        "category": "Delivery Category",
+        "responsible": "Responsible Name",
+        "email": "Email",
+        "phone": "Phone",
+        "hours": "Business Hours",
+        "min_time": "Minimum Delivery Time (min)",
+        "max_time": "Maximum Delivery Time (min)",
+        "delivery_fee": "Delivery Fee ($)",
+        "rating": "Rating (0-5)",
+        "image_url": "Image URL",
+        "cep": "ZIP Code",
+        "address": "Address",
+        "number": "Number",
+        "complement": "Complement",
+        "neighborhood": "Neighborhood",
+        "city": "City",
+        "state": "State",
+        "save": "SAVE CHANGES",
+        "plans": {
+          "basic": "Free Plan | Up to 10 products (including drinks): Membership Fee: $0.00 + $0.99 per order",
+          "pro": "Pro Plan | Up to 30 products (including drinks): Membership Fee $79.90 + $0.99 per order",
+          "premium": "Premium Plan | Up to 50 products (including drinks): Membership Fee $579.90 + $0.99 per order"
+        },
+        "categories": {
+          "101": "OFFERS",
+          "102": "SANDWICHES",
+          "103": "HOT DOGS",
+          "104": "BEVERAGES",
+          "105": "DISHES & PORTIONS",
+          "106": "SUSHI",
+          "107": "FRUITS & VEGETABLES",
+          "108": "MEDICINES",
+          "109": "COOKING GAS",
+          "110": "FLORICULTURE",
+          "111": "MINERAL WATER",
+          "112": "MARKET"
+        }
+      },
+      "plans_section": {
+        "title": "Membership Plans",
+        "subtitle": "Membership Fee (one-time payment) starting from $89.90 (PRO Plan), choose the plan according to your needs:",
+        "free": {
+          "title": "Free",
+          "price": "$0.00",
+          "fee": "+ $0.99 per order",
+          "products": "Up to 10 products",
+          "description": "Register for free and join our catalog! Offline Support (by email)"
+        },
+        "pro": {
+          "title": "Pro",
+          "price": "$89.90",
+          "fee": "+ $0.99 per order",
+          "products": "Up to 30 products",
+          "description": "Online Support (WhatsApp)"
+        },
+        "premium": {
+          "title": "Premium",
+          "price": "$489.90",
+          "fee": "+ $0.99 per order",
+          "products": "Up to 50 products",
+          "description": "Online Support (WhatsApp) + Phone Support"
+        }
+      },
+      "messages": {
+        "pre_register_success": "Pre-registration completed successfully!",
+        "update_success": "Data updated successfully!",
+        "pre_register_error": "Pre-registration error: ",
+        "connection_error": "Server connection error",
+        "unknown_error": "Unknown error"
+      }
     }
   },
   "common": {

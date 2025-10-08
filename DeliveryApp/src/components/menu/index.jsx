@@ -44,7 +44,6 @@ export default function Menu(props) {
 
   const renderMenuItems = (isTabbar = false) => (
     <ul className={`nav ${isTabbar ? 'nav-justified w-100' : 'nav-pills flex-column mb-auto'}`}>
-      <hr className={!isTabbar ? '' : 'd-none'} />
       <li className={`nav-item ${isTabbar ? 'text-center' : ''}`}>
         <Link to="/app/pedidos" className={props.page === "pedidos" ? activeLink : inactiveLink} aria-current="page">
           <GiShoppingBag size={24} className="icon" />
@@ -88,6 +87,11 @@ export default function Menu(props) {
           {!isTabbar && <span className="ms-1 d-none d-sm-inline">{t('app.menu.logout')}</span>}
         </Link>
       </li>
+      {!isTabbar && (
+        <li className="nav-item mt-3">
+          <LanguageSelector isMobile={false} />
+        </li>
+      )}
     </ul>
   );
 
@@ -105,7 +109,6 @@ export default function Menu(props) {
             <p></p>
             <span className="fs-4">{isMobile ? 'Menu' : 'Menu Principal'}</span>
             {renderMenuItems()}
-            <LanguageSelector isMobile={false} />
           </div>
         </div>
       )}

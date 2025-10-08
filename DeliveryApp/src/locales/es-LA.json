@@ -119,7 +119,31 @@
       "address": "Dirección Completa",
       "required_fields": "(*) ¡Campos obligatorios! Después del envío, recibirás instrucciones en tu email para completar tu suscripción y crear tu login de acceso.",
       "submit": "Enviar Solicitud",
-      "modal_title": "¡REGISTRA TU DELIVERY GRATIS!"
+      "modal_title": "¡REGISTRA TU DELIVERY GRATIS!",
+      "category": "Categoría del Delivery",
+      "cancel": "CANCELAR",
+      "send": "ENVIAR PRE-REGISTRO",
+      "success": "¡Delivery registrado exitosamente!",
+      "error_required": "Por favor complete todos los campos obligatorios marcados con (*).",
+      "plans": {
+        "basic": "Plan Gratis | Hasta 10 productos (incluyendo bebidas): Tasa de Adhesión: $0.00 + $0.99 por pedido",
+        "pro": "Plan Pro | Hasta 30 productos (incluyendo bebidas): Tasa de Adhesión $79.90 + $0.99 por pedido",
+        "premium": "Plan Premium | Hasta 50 productos (incluyendo bebidas): Tasa de Adhesión $579.90 + $0.99 por pedido"
+      },
+      "categories": {
+        "101": "OFERTAS",
+        "102": "SÁNDWICHES",
+        "103": "HOT DOGS",
+        "104": "BEBIDAS",
+        "105": "PLATOS Y PORCIONES",
+        "106": "SUSHI",
+        "107": "FRUTAS Y VERDURAS",
+        "108": "MEDICAMENTOS",
+        "109": "GAS DE COCINA",
+        "110": "FLORICULTURA",
+        "111": "AGUA MINERAL",
+        "112": "MERCADO"
+      }
     }
   },
   "mobile": {
@@ -179,7 +203,7 @@
     "menu": {
       "orders": "Pedidos",
       "products": "Productos",
-      "extras": "Extras",
+      "extras": "Adicionales",
       "delivery": "Delivery",
       "logout": "Salir"
     },
@@ -210,6 +234,130 @@
       "image": "Imagen",
       "extras": "Permitir Extras",
       "observations": "Permitir Observaciones"
+    },
+    "extras": {
+      "title": "Artículos Adicionales",
+      "new_item": "NUEVO ARTÍCULO ADICIONAL",
+      "pdf": "PDF",
+      "search_placeholder": "Artículo adicional",
+      "no_items": "No hay artículos adicionales registrados para este delivery.",
+      "error_loading": "Error al cargar artículos adicionales. Intente nuevamente más tarde.",
+      "table": {
+        "id": "ID",
+        "item": "ARTÍCULO ADICIONAL",
+        "unit_price": "PRECIO UNIT.",
+        "actions": "ACCIONES"
+      },
+      "form": {
+        "new_title": "NUEVO ARTÍCULO ADICIONAL",
+        "edit_title": "EDITAR ARTÍCULO ADICIONAL",
+        "description": "Descripción",
+        "unit_price": "Precio Unitario",
+        "cancel": "CANCELAR",
+        "save": "GUARDAR",
+        "close": "Cerrar"
+      },
+      "messages": {
+        "description_required": "Por favor complete el campo Descripción.",
+        "price_invalid": "Por favor complete el campo Precio Unitario con un número válido.",
+        "created_success": "¡Artículo adicional registrado exitosamente!",
+        "updated_success": "¡Artículo adicional actualizado exitosamente!",
+        "validation_error": "Error de validación: Verifique los datos ingresados.",
+        "server_error": "Error del servidor: No se pudo procesar la solicitud.",
+        "unknown_error": "Error desconocido: Intente nuevamente más tarde.",
+        "not_found": "Artículo adicional no encontrado.",
+        "load_error": "Error al cargar artículo adicional: "
+      },
+      "delete": {
+        "title": "Eliminación",
+        "confirm": "¿Confirma eliminar {{item}} ?",
+        "deleted_title": "¡Eliminado!",
+        "deleted_text": "Artículo adicional eliminado.",
+        "cancelled_title": "Cancelado",
+        "cancelled_text": "La eliminación del artículo adicional fue cancelada."
+      },
+      "pdf_generation": {
+        "no_items_title": "Aviso",
+        "no_items_text": "No hay artículos adicionales registrados para generar el PDF.",
+        "error_title": "Error",
+        "error_text": "No se pudo generar el PDF. Intente nuevamente más tarde."
+      }
+    },
+    "delivery": {
+      "title": "DATOS DEL DELIVERY",
+      "form": {
+        "delivery_name": "Nombre del Delivery",
+        "plan": "Plan",
+        "category": "Categoría del Delivery",
+        "responsible": "Nombre del Responsable",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "hours": "Horario de Funcionamiento",
+        "min_time": "Tiempo Mínimo de Entrega (min)",
+        "max_time": "Tiempo Máximo de Entrega (min)",
+        "delivery_fee": "Tasa de Entrega ($)",
+        "rating": "Calificación (0-5)",
+        "image_url": "URL de Imagen",
+        "cep": "Código Postal",
+        "address": "Dirección",
+        "number": "Número",
+        "complement": "Complemento",
+        "neighborhood": "Barrio",
+        "city": "Ciudad",
+        "state": "Estado",
+        "save": "GUARDAR CAMBIOS",
+        "plans": {
+          "basic": "Plan Gratis | Hasta 10 productos (incluyendo bebidas): Tasa de Adhesión: $0.00 + $0.99 por pedido",
+          "pro": "Plan Pro | Hasta 30 productos (incluyendo bebidas): Tasa de Adhesión $79.90 + $0.99 por pedido",
+          "premium": "Plan Premium | Hasta 50 productos (incluyendo bebidas): Tasa de Adhesión $579.90 + $0.99 por pedido"
+        },
+        "categories": {
+          "101": "OFERTAS",
+          "102": "SÁNDWICHES",
+          "103": "HOT DOGS",
+          "104": "BEBIDAS",
+          "105": "PLATOS Y PORCIONES",
+          "106": "SUSHI",
+          "107": "FRUTAS Y VERDURAS",
+          "108": "MEDICAMENTOS",
+          "109": "GAS DE COCINA",
+          "110": "FLORICULTURA",
+          "111": "AGUA MINERAL",
+          "112": "MERCADO"
+        }
+      },
+      "plans_section": {
+        "title": "Planes de Adhesión",
+        "subtitle": "Tasa de Adhesión (pago único) a partir de $89.90 (Plan PRO), elige el plan según tu necesidad:",
+        "free": {
+          "title": "Gratis",
+          "price": "$0.00",
+          "fee": "+ $0.99 por pedido",
+          "products": "Hasta 10 productos",
+          "description": "¡Regístrate gratis y forma parte de nuestro catálogo! Soporte Offline (por email)"
+        },
+        "pro": {
+          "title": "Pro",
+          "price": "$89.90",
+          "fee": "+ $0.99 por pedido",
+          "products": "Hasta 30 productos",
+          "description": "Soporte Online (WhatsApp)"
+        },
+        "premium": {
+          "title": "Premium",
+          "price": "$489.90",
+          "fee": "+ $0.99 por pedido",
+          "products": "Hasta 50 productos",
+          "description": "Soporte Online (WhatsApp) + Soporte Telefónico"
+        }
+      },
+      "messages": {
+        "pre_register_success": "¡Pre-registro completado exitosamente!",
+        "update_success": "¡Datos actualizados exitosamente!",
+        "pre_register_error": "Error en pre-registro: ",
+        "connection_error": "Error de conexión con el servidor",
+        "unknown_error": "Error desconocido"
+      }
     }
   },
   "common": {

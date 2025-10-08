@@ -4,6 +4,7 @@
 
 import React, { useState, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useTranslateContext } from '../../context/TranslateContext';
 import Loading from '../../components/loading/loading';
 import { Link, Navigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
@@ -11,6 +12,7 @@ import './novo.css';
 
 export default function Novo() {
   const { t } = useTranslation();
+  const { currentLanguage } = useTranslateContext();
   const { loading, msg, result, signUp } = useContext(AuthContext);
 
   const [delivery, setDelivery] = useState('');

@@ -38,9 +38,10 @@
   border-color: #0d6efd;
 }
 
-.language-btn .flag {
-  font-size: 14px;
+.language-btn .fi {
+  font-size: 14px !important;
   display: block;
+  line-height: 1;
 }
 
 .language-select-mobile {
@@ -61,4 +62,16 @@
 .language-selector.mobile {
   padding: 10px;
   text-align: center;
+}
+
+/* Estilos específicos para as bandeiras flag-icons */
+.language-btn .fi {
+  width: 16px;
+  height: 12px;
+}
+
+/* Melhorar a aparência das bandeiras no mobile */
+.language-selector.mobile .fi {
+  width: 18px;
+  height: 14px;
 }

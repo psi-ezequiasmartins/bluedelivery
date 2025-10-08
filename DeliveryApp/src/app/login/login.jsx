@@ -5,11 +5,13 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useTranslateContext } from '../../context/TranslateContext';
 import { AuthContext } from '../../context/AuthContext';
 import './login.css';
 
 export default function Login() {
   const { t } = useTranslation();
+  const { currentLanguage } = useTranslateContext();
   const { loading, msg, result, signIn } = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -17,10 +19,12 @@ export default function Login() {
   const ano = new Date().getFullYear();
 
   useEffect(() => {
+    console.log('🌐 Login - Current Language:', currentLanguage);
+    console.log('🌐 Login - Translation test:', t('app.login.title'));
     if (result === 'S') {
       navigate('/app/pedidos');
     }
-  }, [result, navigate]);
+  }, [result, navigate, currentLanguage, t]);
 
   return (
     <div className="d-flex align-items-center text-center form-container">

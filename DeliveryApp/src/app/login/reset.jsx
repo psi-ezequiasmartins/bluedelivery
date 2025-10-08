@@ -1,11 +1,13 @@
 import React, { useState, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useTranslateContext } from '../../context/TranslateContext';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import './reset.css';
 
 export default function Reset() {
   const { t } = useTranslation();
+  const { currentLanguage } = useTranslateContext();
   const { msg, changePassword } = useContext(AuthContext);
   const [email, setEmail] = useState('');
 

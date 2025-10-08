@@ -42,6 +42,9 @@ i18n
       // Chave no localStorage
       lookupLocalStorage: 'bluedelivery-language',
 
+      // Garantir que a chave seja consistente
+      caches: ['localStorage'],
+
       // Mapear idiomas do navegador para nossos códigos
       convertDetectedLanguage: (lng) => {
         // Mapear códigos comuns para nossos idiomas

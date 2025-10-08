@@ -119,7 +119,31 @@
       "address": "Endereço completo",
       "required_fields": "(*) Campos obrigatórios! Após o envio, você receberá em seu e-mail instruções para concluirmos a sua assinatura e criar o seu login de acesso.",
       "submit": "Enviar Solicitação",
-      "modal_title": "CADASTRE SEU DELIVERY GRATUITAMENTE!"
+      "modal_title": "CADASTRE SEU DELIVERY GRATUITAMENTE!",
+      "category": "Categoria do Delivery",
+      "cancel": "CANCELAR",
+      "send": "ENVIAR PRÉ-CADASTRO",
+      "success": "Delivery cadastrado com sucesso!",
+      "error_required": "Favor preencher todos os campos obrigatórios marcados com (*).",
+      "plans": {
+        "basic": "Plano Free | Até 10 produtos (incluindo bebidas): Taxa de Adesão: R$ 0,00 + 0,99 por pedido",
+        "pro": "Plano Pro | Até 30 produtos (incluindo bebidas): Taxa de Adesão R$ 79,90 + 0,99 por pedido",
+        "premium": "Plano Premium | Até 50 Produtos (incluindo bebidas): Taxa de Adesão R$ 579,90 + 0,99 por pedido"
+      },
+      "categories": {
+        "101": "OFERTAS",
+        "102": "SANDUÍCHES",
+        "103": "HOTDOGS",
+        "104": "BEBIDAS",
+        "105": "PRATOS E PORÇÕES",
+        "106": "SUSHI",
+        "107": "FRUTAS E VERDURAS",
+        "108": "MEDICAMENTOS",
+        "109": "GÁS DE COZINHA",
+        "110": "FLORICULTURA",
+        "111": "ÁGUA MINERAL",
+        "112": "MERCADO"
+      }
     }
   },
   "mobile": {
@@ -210,6 +234,130 @@
       "image": "Imagem",
       "extras": "Permite Acréscimos",
       "observations": "Permite Observações"
+    },
+    "extras": {
+      "title": "Itens de Acréscimo",
+      "new_item": "NOVO ITEM ACRÉSCIMO",
+      "pdf": "PDF",
+      "search_placeholder": "Item extra",
+      "no_items": "Nenhum item extra cadastrado para este delivery.",
+      "error_loading": "Erro ao carregar itens extras. Tente novamente mais tarde.",
+      "table": {
+        "id": "ID",
+        "item": "ITEM EXTRA",
+        "unit_price": "VALOR UN.",
+        "actions": "AÇÕES"
+      },
+      "form": {
+        "new_title": "NOVO ITEM DE ACRÉSCIMO",
+        "edit_title": "EDITAR ITEM DE ACRÉSCIMO",
+        "description": "Descrição",
+        "unit_price": "Valor Unitário",
+        "cancel": "CANCELAR",
+        "save": "SALVAR",
+        "close": "Fechar"
+      },
+      "messages": {
+        "description_required": "Favor preencher o campo Descrição.",
+        "price_invalid": "Favor preencher o campo Valor Unitário com um número válido.",
+        "created_success": "Item de Acréscimo cadastrado com sucesso!",
+        "updated_success": "Item de Acréscimo atualizado com sucesso!",
+        "validation_error": "Erro de validação: Verifique os dados informados.",
+        "server_error": "Erro no servidor: Não foi possível processar a solicitação.",
+        "unknown_error": "Erro desconhecido: Tente novamente mais tarde.",
+        "not_found": "Extra não encontrado.",
+        "load_error": "Erro ao carregar extra: "
+      },
+      "delete": {
+        "title": "Exclusão",
+        "confirm": "Confirma excluir {{item}} ?",
+        "deleted_title": "Excluído!",
+        "deleted_text": "Item extra removido.",
+        "cancelled_title": "Cancelado",
+        "cancelled_text": "A exclusão do item extra foi cancelada."
+      },
+      "pdf_generation": {
+        "no_items_title": "Aviso",
+        "no_items_text": "Não há itens extras cadastrados para gerar o PDF.",
+        "error_title": "Erro",
+        "error_text": "Não foi possível gerar o PDF. Tente novamente mais tarde."
+      }
+    },
+    "delivery": {
+      "title": "DADOS DO DELIVERY",
+      "form": {
+        "delivery_name": "Nome do Delivery",
+        "plan": "Plano",
+        "category": "Categoria do Delivery",
+        "responsible": "Nome do Responsável",
+        "email": "E-mail",
+        "phone": "Telefone",
+        "hours": "Horário de Funcionamento",
+        "min_time": "Tempo Mínimo de Entrega (min)",
+        "max_time": "Tempo Máximo de Entrega (min)",
+        "delivery_fee": "Taxa de Entrega (R$)",
+        "rating": "Avaliação (0-5)",
+        "image_url": "URL da Imagem",
+        "cep": "CEP",
+        "address": "Endereço",
+        "number": "Número",
+        "complement": "Complemento",
+        "neighborhood": "Bairro",
+        "city": "Cidade",
+        "state": "UF",
+        "save": "SALVAR ALTERAÇÕES",
+        "plans": {
+          "basic": "Plano Free | Até 10 produtos (incluindo bebidas): Taxa de Adesão: R$ 0,00 + 0,99 por pedido",
+          "pro": "Plano Pro | Até 30 produtos (incluindo bebidas): Taxa de Adesão R$ 79,90 + 0,99 por pedido",
+          "premium": "Plano Premium | Até 50 Produtos (incluindo bebidas): Taxa de Adesão R$ 579,90 + 0,99 por pedido"
+        },
+        "categories": {
+          "101": "OFERTAS",
+          "102": "SANDUÍCHES",
+          "103": "HOTDOGS",
+          "104": "BEBIDAS",
+          "105": "PRATOS E PORÇÕES",
+          "106": "SUSHI",
+          "107": "FRUTAS E VERDURAS",
+          "108": "MEDICAMENTOS",
+          "109": "GÁS DE COZINHA",
+          "110": "FLORICULTURA",
+          "111": "ÁGUA MINERAL",
+          "112": "MERCADO"
+        }
+      },
+      "plans_section": {
+        "title": "Planos de Adesão",
+        "subtitle": "Taxa de Adesão (pagamento único) a partir de R$ 89,90 (Plano PRO), escolha o plano conforme a sua necessidade:",
+        "free": {
+          "title": "Free",
+          "price": "R$ 0,00",
+          "fee": "+ R$ 0,99 por pedido",
+          "products": "Até 10 produtos",
+          "description": "Cadastre-se grátis e venha fazer parte do nosso catálogo! Suporte Offline (por email)"
+        },
+        "pro": {
+          "title": "Pro",
+          "price": "R$ 89,90",
+          "fee": "+ R$ 0,99 por pedido",
+          "products": "Até 30 produtos",
+          "description": "Suporte Online (WhatsApp)"
+        },
+        "premium": {
+          "title": "Premium",
+          "price": "R$ 489,90",
+          "fee": "+ R$ 0,99 por pedido",
+          "products": "Até 50 produtos",
+          "description": "Suporte Online (WhatsApp) + Suporte por Telefone"
+        }
+      },
+      "messages": {
+        "pre_register_success": "Pré-cadastro realizado com sucesso!",
+        "update_success": "Dados atualizados com sucesso!",
+        "pre_register_error": "Erro no pré-cadastro: ",
+        "connection_error": "Erro de conexão com o servidor",
+        "unknown_error": "Erro desconhecido"
+      }
     }
   },
   "common": {
