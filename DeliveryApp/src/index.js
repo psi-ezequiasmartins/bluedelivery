@@ -7,6 +7,8 @@ import ReactDOM from 'react-dom/client';
 import { AuthProvider } from './context/AuthContext';
 import Rotas from './rotas';
 import './style/global.css';
+// Configuração de internacionalização
+import './i18n';
 // import './index.css'; // esta implementação seria usada com Dashboard.jsx
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

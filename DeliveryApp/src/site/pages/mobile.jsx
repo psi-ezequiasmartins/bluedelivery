@@ -1,5 +1,26 @@
-/**
- * src/site/pages/mobile.jsx
+/**import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+function Mobile() {
+  const { t } = useTranslation();
+  
+  return (
+    <section id="mobile">
+      <div className="container">
+        <div className="row align-items-center">
+
+          <div className="col-lg-6">
+            <div className="bloco">
+              <h1>{t('mobile.title')}</h1>
+              <h4>{t('mobile.subtitle')}</h4>
+              <a
+                href="https://drive.google.com/file/d/1KfQlIx6Hkeb5CnZvROEz_Xi6WqG2VzoO/view?usp=sharing"
+                type="button"
+                className="btn btn-dark btn-lg btn-app"
+              >{t('mobile.download_button')}<i className="fa fa-android"></i></a>
+              <p className="text-white">{t('mobile.ios_note')}</p>
+            </div>
+          </div>obile.jsx
  */
 
 import React from 'react';

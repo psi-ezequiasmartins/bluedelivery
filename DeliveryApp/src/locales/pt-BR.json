@@ -1,0 +1,228 @@
+{
+  "menu": {
+    "home": "Início",
+    "advantages": "Vantagens",
+    "testimonials": "Depoimentos",
+    "plans": "Planos de Adesão",
+    "download": "Download (App)",
+    "contact": "Contato"
+  },
+  "banner": {
+    "title": "Simples de configurar e fácil de usar!",
+    "subtitle": "Sistema prático e simplificado para Delivery + Cardápio Digital c/ envio de pedidos via WhatsApp.",
+    "description": "Cadastre gratuitamente o seu Delivery hoje mesmo e faça parte do nosso Catálogo! Pague apenas R$ 0,99 por pedido enviado pela nossa plataforma.",
+    "register": "Cadastre-se",
+    "login": "Fazer Login",
+    "rotating_texts": [
+      "Agilize a gestão de pedidos do seu bar, restaurante ou fastfood de forma muito prática e simples!",
+      "Gestão de Pedidos para Deliveries em Geral de forma ágil e descomplicada.",
+      "Sistema prático e simplificado para Delivery + Cardápio Digital c/ envio de pedidos via WhatsApp.",
+      "Bares, Restaurantes, Pizzarias, Fastfoods, Farmácias, Floriculturas, Gáz de Cozinha, Água Mineral, etc."
+    ]
+  },
+  "advantages": {
+    "title": "Aplicação Web (100% online)",
+    "subtitle": "Gestão Pedidos, Cadastro de Produtos, Cardápio Digital, etc. Tudo o que vc precisa em um único lugar!",
+    "items": {
+      "easy": {
+        "title": "Fácil de usar",
+        "description": "O sistema possui uma interface simples, prática e intuitiva. Fácil de configurar e usar."
+      },
+      "anywhere": {
+        "title": "De qualquer lugar",
+        "description": "Gerencie seu Delivery remotamente (100% online), esteja onde estiver."
+      },
+      "affordable": {
+        "title": "Preço justo",
+        "description": "Pague apenas R$ 0,99 por pedido realizado. Sem mensalidades ou taxas ocultas."
+      },
+      "whatsapp": {
+        "title": "Integração WhatsApp",
+        "description": "Receba pedidos direto no seu WhatsApp"
+      },
+      "digital_menu": {
+        "title": "Cardápio Digital",
+        "description": "Menu online profissional para seus clientes"
+      },
+      "management": {
+        "title": "Gestão Completa",
+        "description": "Controle pedidos, produtos e entregas"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Depoimentos",
+    "subtitle": "O que nossos clientes falam sobre o Blue Delivery",
+    "items": [
+      {
+        "name": "Heliomar P Marques - São Paulo",
+        "text": "Excelente ferramenta para administrar seu Delivery no dia a dia."
+      },
+      {
+        "name": "Afonso Motta - Rio de Janeiro",
+        "text": "Design simples e elegante, interface intuitiva e agradável para todos os usuários."
+      },
+      {
+        "name": "Ezequias Martins - Belo Horizonte",
+        "text": "O Blue Delivery é uma ferramenta útil e intuitiva para gestão de Delivery's em geral."
+      },
+      {
+        "name": "Sérgio Sales - Belo Horizonte",
+        "text": "O Blue Delivery reduz os custos e a distância entre você e seus clientes."
+      }
+    ],
+    "previous": "Anterior",
+    "next": "Próximo"
+  },
+  "plans": {
+    "title": "Planos de Adesão",
+    "subtitle": "Taxa de Adesão (pagamento único) a partir de R$ 89,90 (Plano PRO), escolha o plano conforme a sua necessidade:",
+    "monthly": "Mensal",
+    "yearly": "Anual",
+    "free_trial": "Teste Grátis",
+    "free": {
+      "title": "Free",
+      "price": "R$ 0,00",
+      "fee": "+ R$ 0,99 por pedido",
+      "products": "Até 10 produtos",
+      "description": "Cadastre-se grátis e venha fazer parte do nosso catálogo! Suporte Offline (por email)",
+      "button": "Assine agora"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "R$ 89,90",
+      "fee": "+ R$ 0,99 por pedido",
+      "products": "Até 30 produtos",
+      "description": "Suporte Online: (Google Meet/WhatsApp) + Cardápio Online*",
+      "button": "Assine agora"
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "R$ 489,90",
+      "fee": "+ R$ 0,99 por pedido",
+      "products": "Até 50 produtos",
+      "description": "Suporte Online: (Google Meet/WhatsApp) + Cardápio Online* + Google Ads**",
+      "button": "Assine agora"
+    },
+    "notes": {
+      "digital_menu": "(*) Cardápio Online personalizado c/ a Logo do Delivery",
+      "google_ads": "(**) Campanha de Publicidade no Google Ads",
+      "google_ads_description": "Promova o seu Delivery em sua região através da nossa campanha no Google Ads, para saber mais a respeito, entre em contato por favor."
+    },
+    "form": {
+      "delivery_name": "Nome do Delivery",
+      "plan": "Plano",
+      "responsible": "Responsável",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "schedule": "Horário de Funcionamento",
+      "address": "Endereço completo",
+      "required_fields": "(*) Campos obrigatórios! Após o envio, você receberá em seu e-mail instruções para concluirmos a sua assinatura e criar o seu login de acesso.",
+      "submit": "Enviar Solicitação",
+      "modal_title": "CADASTRE SEU DELIVERY GRATUITAMENTE!"
+    }
+  },
+  "mobile": {
+    "title": "Baixe grátis o nosso App Mobile (Android/iOs*)",
+    "subtitle": "Acesse o nosso catálogo de estabelecimentos com entregas a domicílio próximo a você!",
+    "download_button": "DOWNLOAD UserApp v3.0.1",
+    "ios_note": "(*) em breve disponível também para dispositivos iOs (iPhone, iPads, etc)"
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Entre em contato conosco",
+    "name": "Nome",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "message": "Mensagem",
+    "send": "Enviar"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Uso",
+    "company_name": "MARKA GESTÃO DE PROJETOS",
+    "cnpj": "CNPJ 57.294.418/0001-76",
+    "address": "Av. Acadêmico Nilo Figueiredo, 2303 - Joana Darc - Lagoa Santa MG",
+    "email": "agenciamarka7@gmail.com",
+    "phone": "+55 31 97598-4608",
+    "visits_since": "Visitas desde 30'Setembro'2025"
+  },
+  "app": {
+    "login": {
+      "title": "Olá! Seja bem vindo!",
+      "email": "E-mail",
+      "password": "Senha",
+      "signin": "ENTRAR",
+      "forgot_password": "Esqueci minha senha!",
+      "create_account": "Ainda não possui Conta? Junte-se a nós!",
+      "copyright": "PSI-SOFTWARE"
+    },
+    "register": {
+      "title": "Novo Usuário",
+      "delivery_name": "Delivery",
+      "email": "E-mail",
+      "password": "Defina sua Senha",
+      "confirm_password": "Confirme sua Senha",
+      "signup": "CADASTRAR ACESSO",
+      "already_have_account": "Já tenho uma conta",
+      "copyright": "PSI-SOFTWARE"
+    },
+    "reset": {
+      "title": "Recuperar Senha",
+      "email": "E-mail",
+      "send_link": "ENVIAR LINK",
+      "back_to_login": "Retornar para o Login",
+      "create_account": "Ainda não possui Conta? Junte-se a nós!",
+      "copyright": "PSI-SOFTWARE"
+    },
+    "menu": {
+      "orders": "Pedidos",
+      "products": "Produtos",
+      "extras": "Acréscimos",
+      "delivery": "Delivery",
+      "logout": "Sair"
+    },
+    "orders": {
+      "title": "FILA DE PEDIDOS",
+      "update": "ATUALIZAR",
+      "pdf": "PDF",
+      "no_orders": "Ainda não há pedidos cadastrados para este delivery.",
+      "error_loading": "Erro ao carregar pedidos. Tente novamente mais tarde.",
+      "status": {
+        "pending": "Pendente",
+        "confirmed": "Confirmado",
+        "preparing": "Preparando",
+        "ready": "Pronto",
+        "delivering": "Saiu para Entrega",
+        "delivered": "Entregue",
+        "cancelled": "Cancelado"
+      }
+    },
+    "products": {
+      "title": "GESTÃO DE PRODUTOS",
+      "add": "ADICIONAR",
+      "edit": "EDITAR",
+      "delete": "EXCLUIR",
+      "name": "Nome do Produto",
+      "description": "Descrição",
+      "price": "Preço Unitário",
+      "image": "Imagem",
+      "extras": "Permite Acréscimos",
+      "observations": "Permite Observações"
+    }
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "yes": "Sim",
+    "no": "Não",
+    "save": "Salvar",
+    "close": "Fechar"
+  }
+}

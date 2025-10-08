@@ -3,6 +3,7 @@
  */
 
 import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import { imprimirListagemDePedidos } from './impressao';
 import Menu from "../../../components/menu";
 import Pedido from "./pedido";
@@ -20,6 +21,7 @@ if (pdfFonts && pdfFonts.pdfMake && pdfFonts.pdfMake.vfs) {
 }
 
 export default function Pedidos() {
+  const { t } = useTranslation();
   const vDelivery = localStorage.getItem("vDelivery");
   const vID = localStorage.getItem("vID");
 
@@ -33,15 +35,15 @@ export default function Pedidos() {
         setPedidos(response.data);
         setMsg(''); // Limpa a mensagem caso existam pedidos
       } else {
-        setMsg('Ainda não há pedidos cadastrados para este delivery.');
+        setMsg(t('app.orders.no_orders'));
         setPedidos([]); // Garante que a lista de pedidos esteja vazia
       }
     } catch (error) {
       console.log(error);
       if (error.response && error.response.status === 404) {
-        setMsg('Ainda não há pedidos cadastrados para este delivery.');
+        setMsg(t('app.orders.no_orders'));
       } else {
-        setMsg('Erro ao carregar pedidos. Tente novamente mais tarde.');
+        setMsg(t('app.orders.error_loading'));
       }
       setPedidos([]); // Garante que a lista de pedidos esteja vazia
     }
@@ -49,16 +51,16 @@ export default function Pedidos() {
 
   useEffect(() => {
     ListarPedidos(); // eslint-disable-next-line 
-  }, [pedidos, vID]) 
+  }, [pedidos, vID])
 
   async function loadDeliveryAddress() {
     if (vID) {
       await api.get(`/api/delivery/${vID}`)
         .then((response) => {
           let address = "";
-          address += response.data.ENDERECO+", ";
-          address += response.data.NUMERO+" "+response.data.COMPLEMENTO+", ";
-          address += response.data.BAIRRO+" "+response.data.CIDADE+"-"+response.data.UF+" ";
+          address += response.data.ENDERECO + ", ";
+          address += response.data.NUMERO + " " + response.data.COMPLEMENTO + ", ";
+          address += response.data.BAIRRO + " " + response.data.CIDADE + "-" + response.data.UF + " ";
           address += response.data.CEP;
           localStorage.setItem("vDeliveryAddress", address);
           console.count = 0;
@@ -82,7 +84,7 @@ export default function Pedidos() {
     }
     try {
       console.log('report', pedidos);
-      const documento = imprimirListagemDePedidos(pedidos); 
+      const documento = imprimirListagemDePedidos(pedidos);
       pdfMake.createPdf(documento).open({}, window.open('', '_blank'));
     } catch (error) {
       console.error('Erro ao gerar o PDF:', error);
@@ -95,7 +97,7 @@ export default function Pedidos() {
     }
   }
 
-  return  <>
+  return <>
     <div className="container-fluid">
       <div className="row flex-nowrap">
 
@@ -104,34 +106,34 @@ export default function Pedidos() {
         </div>
 
         <div className="col py-3 me-3">
-            <h1>FILA DE PEDIDOS - {vID} {vDelivery}</h1>
+          <h1>{t('app.orders.title')} - {vID} {vDelivery}</h1>
 
-            <div className="row">
-              <div className="mt-2">
-                <button onClick={ListarPedidos} className="btn m-2 btn-primary">ATUALIZAR</button>
-                <button onClick={VisualizarPDF} className="btn m-2 btn-warning"><i className="fas fa-file-pdf"></i> PDF</button>
-              </div>
+          <div className="row">
+            <div className="mt-2">
+              <button onClick={ListarPedidos} className="btn m-2 btn-primary">{t('app.orders.update')}</button>
+              <button onClick={VisualizarPDF} className="btn m-2 btn-warning"><i className="fas fa-file-pdf"></i> {t('app.orders.pdf')}</button>
             </div>
+          </div>
 
-            <div className="m-2 mt-2">
-              {msg.length > 0 && <div className="alert alert-info">{msg}</div>}
-              {
-                pedidos?.map((pedido) => {
-                  return  <Pedido 
-                            key={pedido.PEDIDO_ID}
-                            PEDIDO_ID={pedido.PEDIDO_ID} 
-                            DATA={pedido.DATA}
-                            DELIVERY_ID={vDelivery}
-                            STATUS={pedido.STATUS}
-                            USER_ID={pedido.USER_ID}
-                            CLIENTE={(pedido.CLIENTE || '').toUpperCase()}
-                            ENDERECO_ENTREGA={(pedido.ENDERECO_ENTREGA || '').toUpperCase()}
-                            PUSH_TOKEN={pedido.PUSH_TOKEN}
-                            itens={pedido.ITENS}
-                          />
-                })
-              }
-            </div>
+          <div className="m-2 mt-2">
+            {msg.length > 0 && <div className="alert alert-info">{msg}</div>}
+            {
+              pedidos?.map((pedido) => {
+                return <Pedido
+                  key={pedido.PEDIDO_ID}
+                  PEDIDO_ID={pedido.PEDIDO_ID}
+                  DATA={pedido.DATA}
+                  DELIVERY_ID={vDelivery}
+                  STATUS={pedido.STATUS}
+                  USER_ID={pedido.USER_ID}
+                  CLIENTE={(pedido.CLIENTE || '').toUpperCase()}
+                  ENDERECO_ENTREGA={(pedido.ENDERECO_ENTREGA || '').toUpperCase()}
+                  PUSH_TOKEN={pedido.PUSH_TOKEN}
+                  itens={pedido.ITENS}
+                />
+              })
+            }
+          </div>
         </div>
 
       </div>

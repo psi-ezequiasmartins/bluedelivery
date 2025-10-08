@@ -1,0 +1,64 @@
+/**
+ * src/components/LanguageSelector/index.css
+ */
+
+.language-selector {
+  padding: 5px;
+}
+
+.language-selector.desktop {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 10px;
+  padding-top: 15px;
+}
+
+.language-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.language-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.language-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.language-btn.active {
+  background: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.language-btn .flag {
+  font-size: 14px;
+  display: block;
+}
+
+.language-select-mobile {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.language-select-mobile option {
+  background: #333;
+  color: white;
+}
+
+.language-selector.mobile {
+  padding: 10px;
+  text-align: center;
+}

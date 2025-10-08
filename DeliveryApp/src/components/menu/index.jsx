@@ -4,6 +4,7 @@
 
 import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { AuthContext } from '../../context/AuthContext.jsx';
 import { FaStore, FaSignOutAlt } from 'react-icons/fa'; //, FaMoneyCheck
 import { IoFastFood } from 'react-icons/io5';
@@ -11,13 +12,15 @@ import { GiShoppingBag } from 'react-icons/gi';
 import { BiFoodMenu } from 'react-icons/bi';
 
 import logo from '../../assets/logo-black.png';
+import LanguageSelector from '../LanguageSelector';
 import './index.css';
 
 import SessionTimeout from '../session/SessionTimeOFF.jsx';
 
 export default function Menu(props) {
+  const { t } = useTranslation();
   const { signOut } = useContext(AuthContext);
-  const [ isMobile, setIsMobile]  = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -36,8 +39,8 @@ export default function Menu(props) {
     navigate("/"); // retorna para a página inicial
   }, [signOut, navigate]); // Adicione signOut e navigate como dependências
 
-  const activeLink    = "nav-link active";
-  const inactiveLink  = "nav-link text-white";
+  const activeLink = "nav-link active";
+  const inactiveLink = "nav-link text-white";
 
   const renderMenuItems = (isTabbar = false) => (
     <ul className={`nav ${isTabbar ? 'nav-justified w-100' : 'nav-pills flex-column mb-auto'}`}>
@@ -45,25 +48,25 @@ export default function Menu(props) {
       <li className={`nav-item ${isTabbar ? 'text-center' : ''}`}>
         <Link to="/app/pedidos" className={props.page === "pedidos" ? activeLink : inactiveLink} aria-current="page">
           <GiShoppingBag size={24} className="icon" />
-          {!isTabbar && <span className="ms-1 d-none d-sm-inline">Pedidos</span>}
+          {!isTabbar && <span className="ms-1 d-none d-sm-inline">{t('app.menu.orders')}</span>}
         </Link>
       </li>
       <li className={`nav-item ${isTabbar ? 'text-center' : ''}`}>
         <Link to="/app/produtos" className={props.page === "produtos" ? activeLink : inactiveLink}>
           <IoFastFood size={24} className="icon" />
-          {!isTabbar && <span className="ms-1 d-none d-sm-inline">Produtos</span>}
+          {!isTabbar && <span className="ms-1 d-none d-sm-inline">{t('app.menu.products')}</span>}
         </Link>
       </li>
       <li className={`nav-item ${isTabbar ? 'text-center' : ''}`}>
         <Link to="/app/extras" className={props.page === "extras" ? activeLink : inactiveLink}>
           <BiFoodMenu size={24} className="icon" />
-          {!isTabbar && <span className="ms-1 d-none d-sm-inline">Acréscimos</span>}
+          {!isTabbar && <span className="ms-1 d-none d-sm-inline">{t('app.menu.extras')}</span>}
         </Link>
       </li>
       <li className={`nav-item ${isTabbar ? 'text-center' : ''}`}>
         <Link to="/app/delivery" className={props.page === "delivery" ? activeLink : inactiveLink}>
           <FaStore size={24} className="icon" />
-          {!isTabbar && <span className="ms-1 d-none d-sm-inline">Delivery</span>}
+          {!isTabbar && <span className="ms-1 d-none d-sm-inline">{t('app.menu.delivery')}</span>}
         </Link>
       </li>
       {/* <li className={`nav-item ${isTabbar ? 'text-center' : ''}`}>
@@ -82,7 +85,7 @@ export default function Menu(props) {
       <li className={`nav-item ${isTabbar ? 'text-center' : ''}`}>
         <Link to="/" onClick={handleLogout} className={props.page === "Logout" ? activeLink : inactiveLink}>
           <FaSignOutAlt size={24} className="icon" />
-          {!isTabbar && <span className="ms-1 d-none d-sm-inline">Sair (LogOut)</span>}
+          {!isTabbar && <span className="ms-1 d-none d-sm-inline">{t('app.menu.logout')}</span>}
         </Link>
       </li>
     </ul>
@@ -102,6 +105,7 @@ export default function Menu(props) {
             <p></p>
             <span className="fs-4">{isMobile ? 'Menu' : 'Menu Principal'}</span>
             {renderMenuItems()}
+            <LanguageSelector isMobile={false} />
           </div>
         </div>
       )}
@@ -110,6 +114,9 @@ export default function Menu(props) {
       {isMobile && (
         <nav className="menu tabbar" id="menu">
           {renderMenuItems(true)}
+          <div className="mobile-language-wrapper">
+            <LanguageSelector isMobile={true} />
+          </div>
         </nav>
       )}
     </>

@@ -2,8 +2,10 @@
  * src/site/pages/footer.jsx
  */
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t } = useTranslation();
   var ano = new Date().getFullYear();
 
   return (
@@ -21,14 +23,14 @@ function Footer() {
         </ul> */}
       </div>
       <p>
-        <strong>MARKA GESTÃO DE PROJETOS</strong> CNPJ 57.294.418/0001-76
-        <br /><i className="fa fa-map-marker"></i> Av. Acadêmico Nilo Figueiredo, 2303 - Joana Darc - Lagoa Santa MG
-        <br /><i className="fa fa-envelope"></i> <a href="mailto:#">agenciamarka7@gmail.com</a>
-        <br /><i className="fa fa-phone"></i> +55 31 97598-4608
+        <strong>{t('footer.company_name')}</strong> {t('footer.cnpj')}
+        <br /><i className="fa fa-map-marker"></i> {t('footer.address')}
+        <br /><i className="fa fa-envelope"></i> <a href="mailto:#">{t('footer.email')}</a>
+        <br /><i className="fa fa-phone"></i> {t('footer.phone')}
         <br />© 2025-{ano} MARKA<br />
         <a href="https://www.easycounter.com/">
           <img src="https://www.easycounter.com/counter.php?ezequiasmartins,index-paginainicial" border="0" alt="Free Hit Counter" /></a><br />
-        <a href="https://www.easycounter.com/">Visitas desde 30'Setembro'2025</a>
+        <a href="https://www.easycounter.com/">{t('footer.visits_since')}</a>
       </p>
     </section>
   );

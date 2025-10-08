@@ -1,0 +1,228 @@
+{
+  "menu": {
+    "home": "Home",
+    "advantages": "Features",
+    "testimonials": "Testimonials",
+    "plans": "Pricing Plans",
+    "download": "Download (App)",
+    "contact": "Contact"
+  },
+  "banner": {
+    "title": "Simple to setup and easy to use!",
+    "subtitle": "Practical and simplified system for Delivery + Digital Menu with order sending via WhatsApp.",
+    "description": "Register your Delivery for free today and join our Catalog! Pay only $0.18 per order sent through our platform.",
+    "register": "Sign Up",
+    "login": "Sign In",
+    "rotating_texts": [
+      "Streamline your bar, restaurant or fast food order management in a very practical and simple way!",
+      "Order Management for General Deliveries in an agile and uncomplicated way.",
+      "Practical and simplified system for Delivery + Digital Menu with order sending via WhatsApp.",
+      "Bars, Restaurants, Pizzerias, Fast Foods, Pharmacies, Flower Shops, Cooking Gas, Mineral Water, etc."
+    ]
+  },
+  "advantages": {
+    "title": "Web Application (100% online)",
+    "subtitle": "Order Management, Product Registration, Digital Menu, etc. Everything you need in one place!",
+    "items": {
+      "easy": {
+        "title": "Easy to use",
+        "description": "The system has a simple, practical and intuitive interface. Easy to set up and use."
+      },
+      "anywhere": {
+        "title": "From anywhere",
+        "description": "Manage your Delivery remotely (100% online), wherever you are."
+      },
+      "affordable": {
+        "title": "Fair price",
+        "description": "Pay only $0.18 per order placed. No monthly fees or hidden charges."
+      },
+      "whatsapp": {
+        "title": "WhatsApp Integration",
+        "description": "Receive orders directly on your WhatsApp"
+      },
+      "digital_menu": {
+        "title": "Digital Menu",
+        "description": "Professional online menu for your customers"
+      },
+      "management": {
+        "title": "Complete Management",
+        "description": "Control orders, products and deliveries"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What our customers say about Blue Delivery",
+    "items": [
+      {
+        "name": "Heliomar P Marques - São Paulo",
+        "text": "Excellent tool to manage your Delivery on a daily basis."
+      },
+      {
+        "name": "Afonso Motta - Rio de Janeiro",
+        "text": "Simple and elegant design, intuitive and pleasant interface for all users."
+      },
+      {
+        "name": "Ezequias Martins - Belo Horizonte",
+        "text": "Blue Delivery is a useful and intuitive tool for managing Deliveries in general."
+      },
+      {
+        "name": "Sérgio Sales - Belo Horizonte",
+        "text": "Blue Delivery reduces costs and the distance between you and your customers."
+      }
+    ],
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "plans": {
+    "title": "Subscription Plans",
+    "subtitle": "One-time Subscription Fee starting from $16.20 (PRO Plan), choose the plan according to your needs:",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "free_trial": "Free Trial",
+    "free": {
+      "title": "Free",
+      "price": "$0.00",
+      "fee": "+ $0.18 per order",
+      "products": "Up to 10 products",
+      "description": "Sign up for free and join our catalog! Offline Support (by email)",
+      "button": "Sign up now"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$16.20",
+      "fee": "+ $0.18 per order",
+      "products": "Up to 30 products",
+      "description": "Online Support: (Google Meet/WhatsApp) + Online Menu*",
+      "button": "Sign up now"
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "$88.20",
+      "fee": "+ $0.18 per order",
+      "products": "Up to 50 products",
+      "description": "Online Support: (Google Meet/WhatsApp) + Online Menu* + Google Ads**",
+      "button": "Sign up now"
+    },
+    "notes": {
+      "digital_menu": "(*) Personalized Online Menu with Delivery Logo",
+      "google_ads": "(**) Google Ads Advertising Campaign",
+      "google_ads_description": "Promote your Delivery in your region through our Google Ads campaign, for more information, please contact us."
+    },
+    "form": {
+      "delivery_name": "Delivery Name",
+      "plan": "Plan",
+      "responsible": "Responsible Person",
+      "email": "Email",
+      "phone": "Phone",
+      "schedule": "Business Hours",
+      "address": "Complete Address",
+      "required_fields": "(*) Required fields! After submission, you will receive instructions in your email to complete your subscription and create your access login.",
+      "submit": "Submit Request",
+      "modal_title": "REGISTER YOUR DELIVERY FOR FREE!"
+    }
+  },
+  "mobile": {
+    "title": "Download our free Mobile App (Android/iOS*)",
+    "subtitle": "Access our catalog of establishments with home delivery near you!",
+    "download_button": "DOWNLOAD UserApp v3.0.1",
+    "ios_note": "(*) soon also available for iOS devices (iPhone, iPads, etc)"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with us",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "send": "Send"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "company_name": "MARKA PROJECT MANAGEMENT",
+    "cnpj": "Tax ID 57.294.418/0001-76",
+    "address": "Av. Acadêmico Nilo Figueiredo, 2303 - Joana Darc - Lagoa Santa MG - Brazil",
+    "email": "agenciamarka7@gmail.com",
+    "phone": "+55 31 97598-4608",
+    "visits_since": "Visits since September 30, 2025"
+  },
+  "app": {
+    "login": {
+      "title": "Hello! Welcome!",
+      "email": "Email",
+      "password": "Password",
+      "signin": "SIGN IN",
+      "forgot_password": "Forgot my password!",
+      "create_account": "Don't have an account yet? Join us!",
+      "copyright": "PSI-SOFTWARE"
+    },
+    "register": {
+      "title": "New User",
+      "delivery_name": "Delivery",
+      "email": "Email",
+      "password": "Set your Password",
+      "confirm_password": "Confirm your Password",
+      "signup": "CREATE ACCESS",
+      "already_have_account": "I already have an account",
+      "copyright": "PSI-SOFTWARE"
+    },
+    "reset": {
+      "title": "Reset Password",
+      "email": "Email",
+      "send_link": "SEND LINK",
+      "back_to_login": "Back to Login",
+      "create_account": "Don't have an account yet? Join us!",
+      "copyright": "PSI-SOFTWARE"
+    },
+    "menu": {
+      "orders": "Orders",
+      "products": "Products",
+      "extras": "Extras",
+      "delivery": "Delivery",
+      "logout": "Logout"
+    },
+    "orders": {
+      "title": "ORDER QUEUE",
+      "update": "UPDATE",
+      "pdf": "PDF",
+      "no_orders": "No orders registered for this delivery yet.",
+      "error_loading": "Error loading orders. Please try again later.",
+      "status": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "preparing": "Preparing",
+        "ready": "Ready",
+        "delivering": "Out for Delivery",
+        "delivered": "Delivered",
+        "cancelled": "Cancelled"
+      }
+    },
+    "products": {
+      "title": "PRODUCT MANAGEMENT",
+      "add": "ADD",
+      "edit": "EDIT",
+      "delete": "DELETE",
+      "name": "Product Name",
+      "description": "Description",
+      "price": "Unit Price",
+      "image": "Image",
+      "extras": "Allow Extras",
+      "observations": "Allow Observations"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "yes": "Yes",
+    "no": "No",
+    "save": "Save",
+    "close": "Close"
+  }
+}

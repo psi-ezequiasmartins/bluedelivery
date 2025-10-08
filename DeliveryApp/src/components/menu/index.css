@@ -25,7 +25,8 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  display: none; /* Oculta por padrão */
+  display: none;
+  /* Oculta por padrão */
   flex-direction: row;
   justify-content: space-around;
   /* padding: 10px 0; */
@@ -75,7 +76,14 @@
 
 @media (min-width: 576px) {
   .px-sm-2 {
-      padding-right: 0 !important;
-      padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
+}
+
+.mobile-language-wrapper {
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  z-index: 1000;
 }

@@ -4,13 +4,15 @@
 
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { AuthContext } from '../../context/AuthContext';
 import './login.css';
 
 export default function Login() {
+  const { t } = useTranslation();
   const { loading, msg, result, signIn } = useContext(AuthContext);
-  const [ email, setEmail ] = useState('');
-  const [ password, setPassword ] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const ano = new Date().getFullYear();
 
@@ -27,27 +29,27 @@ export default function Login() {
           <img className="mb-4" src="/images/logo.png" alt="" />
         </a>
 
-        <h1 className="h3 mb-2 fw-normal">Olá! Seja bem vindo!</h1>
+        <h1 className="h3 mb-2 fw-normal">{t('app.login.title')}</h1>
 
         <div className="form-floating mt-2">
-          <input onChange={(e)=>setEmail(e.target.value)} type="email" className="form-control" id="email" placeholder="E-mail"/>
-          <label htmlFor="email">E-mail</label>
+          <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="email" placeholder={t('app.login.email')} />
+          <label htmlFor="email">{t('app.login.email')}</label>
         </div>
 
         <div className="form-floating mt-2">
-          <input onChange={(e)=>setPassword(e.target.value)} type="password" className="form-control" id="password" placeholder="Senha"/>
-          <label htmlFor="password">Senha</label>
+          <input onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" id="password" placeholder={t('app.login.password')} />
+          <label htmlFor="password">{t('app.login.password')}</label>
         </div>
 
-        <button onClick={()=>signIn(email, password)} className="btn btn-lg btn-dark mt-2 w-100" type="button">ENTRAR</button>
+        <button onClick={() => signIn(email, password)} className="btn btn-lg btn-dark mt-2 w-100" type="button">{t('app.login.signin')}</button>
 
         <div className="form-links">
-          <Link to="/app/login/reset" className="mx-3">Esqueci minha senha!</Link><br/>
-          <Link to="/app/login/novo" className="mx-3">Ainda não possui Conta? Junte-se a nós!</Link> 
+          <Link to="/app/login/reset" className="mx-3">{t('app.login.forgot_password')}</Link><br />
+          <Link to="/app/login/novo" className="mx-3">{t('app.login.create_account')}</Link>
         </div>
 
         {msg && <div className="alert alert-danger mt-2" role="alert">{msg}</div>}
-        <p>&copy; 1999-{ano} PSI-SOFTWARE</p>
+        <p>&copy; 1999-{ano} {t('app.login.copyright')}</p>
       </form>
       {loading && (
         <div className="loading-overlay">

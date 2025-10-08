@@ -1,0 +1,228 @@
+{
+  "menu": {
+    "home": "Inicio",
+    "advantages": "Ventajas",
+    "testimonials": "Testimonios",
+    "plans": "Planes de Suscripción",
+    "download": "Descargar (App)",
+    "contact": "Contacto"
+  },
+  "banner": {
+    "title": "¡Simple de configurar y fácil de usar!",
+    "subtitle": "Sistema práctico y simplificado para Delivery + Menú Digital con envío de pedidos vía WhatsApp.",
+    "description": "¡Registra tu Delivery gratis hoy mismo y únete a nuestro Catálogo! Paga solo $0,18 por pedido enviado a través de nuestra plataforma.",
+    "register": "Registrarse",
+    "login": "Iniciar Sesión",
+    "rotating_texts": [
+      "¡Agiliza la gestión de pedidos de tu bar, restaurante o comida rápida de manera muy práctica y simple!",
+      "Gestión de Pedidos para Deliveries en General de forma ágil y sin complicaciones.",
+      "Sistema práctico y simplificado para Delivery + Menú Digital con envío de pedidos vía WhatsApp.",
+      "Bares, Restaurantes, Pizzerías, Comida Rápida, Farmacias, Floristerías, Gas de Cocina, Agua Mineral, etc."
+    ]
+  },
+  "advantages": {
+    "title": "Aplicación Web (100% online)",
+    "subtitle": "Gestión de Pedidos, Registro de Productos, Menú Digital, etc. ¡Todo lo que necesitas en un solo lugar!",
+    "items": {
+      "easy": {
+        "title": "Fácil de usar",
+        "description": "El sistema tiene una interfaz simple, práctica e intuitiva. Fácil de configurar y usar."
+      },
+      "anywhere": {
+        "title": "Desde cualquier lugar",
+        "description": "Gestiona tu Delivery remotamente (100% online), estés donde estés."
+      },
+      "affordable": {
+        "title": "Precio justo",
+        "description": "Paga solo $0,18 por pedido realizado. Sin cuotas mensuales o cargos ocultos."
+      },
+      "whatsapp": {
+        "title": "Integración WhatsApp",
+        "description": "Recibe pedidos directamente en tu WhatsApp"
+      },
+      "digital_menu": {
+        "title": "Menú Digital",
+        "description": "Menú online profesional para tus clientes"
+      },
+      "management": {
+        "title": "Gestión Completa",
+        "description": "Controla pedidos, productos y entregas"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Lo que nuestros clientes dicen sobre Blue Delivery",
+    "items": [
+      {
+        "name": "Heliomar P Marques - São Paulo",
+        "text": "Excelente herramienta para administrar tu Delivery en el día a día."
+      },
+      {
+        "name": "Afonso Motta - Rio de Janeiro",
+        "text": "Diseño simple y elegante, interfaz intuitiva y agradable para todos los usuarios."
+      },
+      {
+        "name": "Ezequias Martins - Belo Horizonte",
+        "text": "Blue Delivery es una herramienta útil e intuitiva para la gestión de Deliveries en general."
+      },
+      {
+        "name": "Sérgio Sales - Belo Horizonte",
+        "text": "Blue Delivery reduce los costos y la distancia entre tú y tus clientes."
+      }
+    ],
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "plans": {
+    "title": "Planes de Suscripción",
+    "subtitle": "Tarifa de Suscripción (pago único) desde $16,20 (Plan PRO), elige el plan según tus necesidades:",
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "free_trial": "Prueba Gratis",
+    "free": {
+      "title": "Gratis",
+      "price": "$0,00",
+      "fee": "+ $0,18 por pedido",
+      "products": "Hasta 10 productos",
+      "description": "¡Regístrate gratis y únete a nuestro catálogo! Soporte Offline (por email)",
+      "button": "Suscribirse ahora"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$16,20",
+      "fee": "+ $0,18 por pedido",
+      "products": "Hasta 30 productos",
+      "description": "Soporte Online: (Google Meet/WhatsApp) + Menú Online*",
+      "button": "Suscribirse ahora"
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "$88,20",
+      "fee": "+ $0,18 por pedido",
+      "products": "Hasta 50 productos",
+      "description": "Soporte Online: (Google Meet/WhatsApp) + Menú Online* + Google Ads**",
+      "button": "Suscribirse ahora"
+    },
+    "notes": {
+      "digital_menu": "(*) Menú Online personalizado con el Logo del Delivery",
+      "google_ads": "(**) Campaña de Publicidad en Google Ads",
+      "google_ads_description": "Promociona tu Delivery en tu región a través de nuestra campaña en Google Ads, para más información, por favor contáctanos."
+    },
+    "form": {
+      "delivery_name": "Nombre del Delivery",
+      "plan": "Plan",
+      "responsible": "Responsable",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "schedule": "Horario de Funcionamiento",
+      "address": "Dirección Completa",
+      "required_fields": "(*) ¡Campos obligatorios! Después del envío, recibirás instrucciones en tu email para completar tu suscripción y crear tu login de acceso.",
+      "submit": "Enviar Solicitud",
+      "modal_title": "¡REGISTRA TU DELIVERY GRATIS!"
+    }
+  },
+  "mobile": {
+    "title": "Descarga gratis nuestra App Móvil (Android/iOS*)",
+    "subtitle": "¡Accede a nuestro catálogo de establecimientos con entrega a domicilio cerca de ti!",
+    "download_button": "DESCARGAR UserApp v3.0.1",
+    "ios_note": "(*) pronto también disponible para dispositivos iOS (iPhone, iPads, etc)"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Ponte en contacto con nosotros",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "message": "Mensaje",
+    "send": "Enviar"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Uso",
+    "company_name": "MARKA GESTIÓN DE PROYECTOS",
+    "cnpj": "CNPJ 57.294.418/0001-76",
+    "address": "Av. Acadêmico Nilo Figueiredo, 2303 - Joana Darc - Lagoa Santa MG - Brasil",
+    "email": "agenciamarka7@gmail.com",
+    "phone": "+55 31 97598-4608",
+    "visits_since": "Visitas desde el 30 de Septiembre de 2025"
+  },
+  "app": {
+    "login": {
+      "title": "¡Hola! ¡Bienvenido!",
+      "email": "Correo Electrónico",
+      "password": "Contraseña",
+      "signin": "INICIAR SESIÓN",
+      "forgot_password": "¡Olvidé mi contraseña!",
+      "create_account": "¿Aún no tienes cuenta? ¡Únete a nosotros!",
+      "copyright": "PSI-SOFTWARE"
+    },
+    "register": {
+      "title": "Nuevo Usuario",
+      "delivery_name": "Delivery",
+      "email": "Correo Electrónico",
+      "password": "Define tu Contraseña",
+      "confirm_password": "Confirma tu Contraseña",
+      "signup": "REGISTRAR ACCESO",
+      "already_have_account": "Ya tengo una cuenta",
+      "copyright": "PSI-SOFTWARE"
+    },
+    "reset": {
+      "title": "Recuperar Contraseña",
+      "email": "Correo Electrónico",
+      "send_link": "ENVIAR ENLACE",
+      "back_to_login": "Volver al Login",
+      "create_account": "¿Aún no tienes cuenta? ¡Únete a nosotros!",
+      "copyright": "PSI-SOFTWARE"
+    },
+    "menu": {
+      "orders": "Pedidos",
+      "products": "Productos",
+      "extras": "Extras",
+      "delivery": "Delivery",
+      "logout": "Salir"
+    },
+    "orders": {
+      "title": "COLA DE PEDIDOS",
+      "update": "ACTUALIZAR",
+      "pdf": "PDF",
+      "no_orders": "Aún no hay pedidos registrados para este delivery.",
+      "error_loading": "Error al cargar pedidos. Inténtalo de nuevo más tarde.",
+      "status": {
+        "pending": "Pendiente",
+        "confirmed": "Confirmado",
+        "preparing": "Preparando",
+        "ready": "Listo",
+        "delivering": "En Camino",
+        "delivered": "Entregado",
+        "cancelled": "Cancelado"
+      }
+    },
+    "products": {
+      "title": "GESTIÓN DE PRODUCTOS",
+      "add": "AGREGAR",
+      "edit": "EDITAR",
+      "delete": "ELIMINAR",
+      "name": "Nombre del Producto",
+      "description": "Descripción",
+      "price": "Precio Unitario",
+      "image": "Imagen",
+      "extras": "Permitir Extras",
+      "observations": "Permitir Observaciones"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "yes": "Sí",
+    "no": "No",
+    "save": "Guardar",
+    "close": "Cerrar"
+  }
+}
