@@ -24,7 +24,7 @@
         "buildType": "app-bundle"
       },
       "env": {
-        "BASE_URL": "https://srv.deliverybairro.com",
+        "BASE_URL": "https://server.bluedelivery.tech",
         "GOOGLE_MAPS_API_KEY": "AIzaSyC6YSUb6L47sKu1ykiKFSsfdTfJNmhlgx4"
       }
     }
