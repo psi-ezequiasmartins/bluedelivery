@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "title": "¡Bienvenido!",
+    "subtitle": "Blue Delivery - UserApp"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "categories": "Categorías",
+    "deliveries": "Deliveries",
+    "orders": "Mis Pedidos",
+    "profile": "Perfil",
+    "cart": "Carrito",
+    "logout": "Salir (Cerrar)",
+    "closeMenu": "Cerrar Este Menú"
+  },
+  "tabs": {
+    "deliveries": "Deliveries",
+    "myOrders": "Mis Pedidos",
+    "profile": "Perfil"
+  },
+  "headers": {
+    "delivery": "Blue Delivery v1.0",
+    "deliveriesList": "Lista de Deliveries",
+    "deliveryInfo": "Info Delivery",
+    "myOrders": "Mis Pedidos",
+    "orderDetails": "Detalles del Pedido",
+    "userData": "Datos del Usuario"
+  },
+  "auth": {
+    "login": "Ingresar",
+    "register": "Registrarse",
+    "logout": "Salir",
+    "email": "Correo",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "phone": "Teléfono"
+  },
+  "user": {
+    "welcome": "¡Bienvenido!",
+    "userId": "UserID",
+    "myData": "Mis Datos",
+    "profile": "Perfil",
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo",
+    "phone": "Teléfono"
+  },
+  "profile": {
+    "updateData": "Actualizar Datos"
+  },
+  "orders": {
+    "title": "Mis Pedidos",
+    "empty": "No se encontraron pedidos",
+    "status": {
+      "pending": "Pendiente",
+      "confirmed": "Confirmado",
+      "preparing": "Preparando",
+      "ready": "Listo",
+      "delivering": "Entregando",
+      "delivered": "Entregado",
+      "cancelled": "Cancelado"
+    }
+  },
+  "cart": {
+    "title": "Carrito",
+    "empty": "Carrito vacío",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "delivery": "Entrega",
+    "checkout": "Finalizar Pedido",
+    "clear": "Limpiar Carrito"
+  },
+  "product": {
+    "price": "Precio",
+    "description": "Descripción",
+    "addToCart": "Agregar al Carrito",
+    "quantity": "Cantidad",
+    "extras": "Extras"
+  },
+  "delivery": {
+    "info": "Información del Delivery",
+    "menu": "Menú",
+    "contact": "Contacto",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "workingHours": "Horario de Atención",
+    "deliveryFee": "Costo de Entrega",
+    "minimumOrder": "Pedido Mínimo"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clear": "Limpiar",
+    "add": "Agregar",
+    "remove": "Eliminar",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "yes": "Sí",
+    "no": "No",
+    "ok": "OK"
+  },
+  "messages": {
+    "welcomeBack": "¡Bienvenido de vuelta!",
+    "loginSuccess": "Inicio de sesión exitoso",
+    "loginError": "Error al iniciar sesión",
+    "logoutSuccess": "Cierre de sesión exitoso",
+    "networkError": "Error de conexión",
+    "serverError": "Error del servidor",
+    "invalidCredentials": "Credenciales inválidas",
+    "fillAllFields": "Complete todos los campos",
+    "passwordTooShort": "Contraseña muy corta",
+    "emailInvalid": "Correo inválido",
+    "passwordsNotMatch": "Las contraseñas no coinciden",
+    "registerPrompt": "¿Aún no tienes cuenta? ¡Únete a nosotros!",
+    "forgotPassword": "¿Olvidaste tu contraseña? Haz clic aquí."
+  },
+  "language": {
+    "select": "Seleccionar Idioma",
+    "current": "Idioma Actual",
+    "portuguese": "Português",
+    "english": "English",
+    "spanish": "Español"
+  },
+  "settings": {
+    "title": "Configuraciones",
+    "language": "Idioma",
+    "notifications": "Notificaciones",
+    "darkMode": "Modo Oscuro",
+    "about": "Acerca de",
+    "version": "Versión",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfUse": "Términos de Uso"
+  },
+  "footer": {
+    "copyright": "© 2025 Marka",
+    "rightsReserved": "Derechos Reservados",
+    "blueDelivery": "Blue Delivery"
+  }
+}

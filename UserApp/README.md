@@ -1,4 +1,4 @@
-## psi-Delivery (UserApp v1.0)
+## Blue Delivery (UserApp v1.0)
 Aplicação Mobile (Android/iOs) escrita em React Native + Expo SDK 52 parte integrante do projeto psi-Delivery v1.0 (Sistema de Gestão de Pedidos e Entregas a Domicílio para Bares, Restaurantes, Fastfoods, Deliveries em geral).
 
 ## Atualizando o Node.Js/NPM, Expo-CLI e EAS-CLI

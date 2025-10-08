@@ -18,8 +18,8 @@ import sacola from '../../../assets/pedidos.png';
 export default function Header() {
   const navigation = useNavigation();
   const { basket } = useContext(CartContext);
-  const { pushToken, getPushToken }  = useContext(NotificationContext);  
-  const { setNotify } = useContext(NotificationContext); 
+  const { pushToken, getPushToken } = useContext(NotificationContext);
+  const { setNotify } = useContext(NotificationContext);
 
   const notificationListener = useRef();
 
@@ -31,10 +31,10 @@ export default function Header() {
             console.log('pushToken:', token);
           } else {
             console.warn('Falha ao obter o pushToken.');
-          }  
+          }
         }
       });
-    } else if (isDevelopment) {  
+    } else if (isDevelopment) {
       console.log('pushToken já obtido:', pushToken);
     }
 
@@ -59,22 +59,22 @@ export default function Header() {
   return (
     <View>
       <View style={styles.header}>
-        <TouchableOpacity 
-          onPress={()=> {
-            alert('psi-Delivery UserApp v1.0' + '\n' + '(31) 98410-7540 '+ '\n' + `pushToken: ${pushToken}`); 
+        <TouchableOpacity
+          onPress={() => {
+            alert('Blue Delivery - UserApp v1.0' + '\n' + '+55 31 98410-7540 ' + '\n' + `pushToken: ${pushToken}`);
             GoToLink("Home");
           }}
         >
           <Image source={icon} style={{ width: 85, height: 85 }} resizeMode="contain" />
         </TouchableOpacity>
-        <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
           <Image source={logomarca} style={{ width: 195, height: 85 }} resizeMode="contain" />
         </View>
-        <TouchableOpacity onPress={()=>GoToLink('Cesta')}>
+        <TouchableOpacity onPress={() => GoToLink('Cesta')}>
           <Image source={sacola} style={{ width: 85, height: 85 }} resizeMode="contain" />
-          { basket.length >= 1 &&
+          {basket.length >= 1 &&
             <View style={styles.dot}>
-              <Text style={styles.dotText}>{ basket?.length }</Text>
+              <Text style={styles.dotText}>{basket?.length}</Text>
             </View>
           }
         </TouchableOpacity>
@@ -84,10 +84,10 @@ export default function Header() {
 }
 
 const styles = StyleSheet.create({
-  header:{
+  header: {
     height: 100,
-    flexDirection: 'row', 
-    justifyContent: 'space-between', 
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#FFF',
     paddingLeft: 10,
@@ -96,19 +96,19 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.5,
     marginBottom: 5,
   },
-  dot:{
+  dot: {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'red',
     width: 30,
-    height: 30, 
+    height: 30,
     borderRadius: 15,
     position: 'absolute',
     zIndex: 99,
     bottom: -4,
     left: -6
   },
-  dotText:{
+  dotText: {
     fontSize: 14,
     color: '#FFF'
   }

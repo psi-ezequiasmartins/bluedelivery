@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "title": "Bem-vindo!",
+    "subtitle": "Blue Delivery - UserApp"
+  },
+  "navigation": {
+    "home": "Início",
+    "categories": "Categorias",
+    "deliveries": "Deliveries",
+    "orders": "Meus Pedidos",
+    "profile": "Perfil",
+    "cart": "Carrinho",
+    "logout": "Sair (Fechar)",
+    "closeMenu": "Fechar Este Menu"
+  },
+  "tabs": {
+    "deliveries": "Deliveries",
+    "myOrders": "Meus Pedidos",
+    "profile": "Perfil"
+  },
+  "headers": {
+    "delivery": "Blue Delivery v1.0",
+    "deliveriesList": "Lista de Deliveries",
+    "deliveryInfo": "Delivery Info",
+    "myOrders": "Meus Pedidos",
+    "orderDetails": "Detalhes do Pedido",
+    "userData": "Dados do Usuário"
+  },
+  "auth": {
+    "login": "Entrar",
+    "register": "Cadastrar",
+    "logout": "Sair",
+    "email": "E-mail",
+    "password": "Senha",
+    "confirmPassword": "Confirmar Senha",
+    "name": "Nome",
+    "lastName": "Sobrenome",
+    "phone": "Telefone"
+  },
+  "user": {
+    "welcome": "Bem vindo!",
+    "userId": "UserID",
+    "myData": "Meus Dados",
+    "profile": "Perfil",
+    "name": "Nome",
+    "lastName": "Sobrenome",
+    "email": "E-mail",
+    "phone": "Telefone"
+  },
+  "profile": {
+    "updateData": "Atualizar Dados"
+  },
+  "orders": {
+    "title": "Meus Pedidos",
+    "empty": "Nenhum pedido encontrado",
+    "status": {
+      "pending": "Pendente",
+      "confirmed": "Confirmado",
+      "preparing": "Preparando",
+      "ready": "Pronto",
+      "delivering": "Entregando",
+      "delivered": "Entregue",
+      "cancelled": "Cancelado"
+    }
+  },
+  "cart": {
+    "title": "Carrinho",
+    "empty": "Carrinho vazio",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "delivery": "Entrega",
+    "checkout": "Finalizar Pedido",
+    "clear": "Limpar Carrinho"
+  },
+  "product": {
+    "price": "Preço",
+    "description": "Descrição",
+    "addToCart": "Adicionar ao Carrinho",
+    "quantity": "Quantidade",
+    "extras": "Extras"
+  },
+  "delivery": {
+    "info": "Informações do Delivery",
+    "menu": "Cardápio",
+    "contact": "Contato",
+    "address": "Endereço",
+    "phone": "Telefone",
+    "workingHours": "Horário de Funcionamento",
+    "deliveryFee": "Taxa de Entrega",
+    "minimumOrder": "Pedido Mínimo"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Salvar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clear": "Limpar",
+    "add": "Adicionar",
+    "remove": "Remover",
+    "close": "Fechar",
+    "open": "Abrir",
+    "yes": "Sim",
+    "no": "Não",
+    "ok": "OK"
+  },
+  "messages": {
+    "welcomeBack": "Bem-vindo de volta!",
+    "loginSuccess": "Login realizado com sucesso",
+    "loginError": "Erro ao fazer login",
+    "logoutSuccess": "Logout realizado com sucesso",
+    "networkError": "Erro de conexão",
+    "serverError": "Erro no servidor",
+    "invalidCredentials": "Credenciais inválidas",
+    "fillAllFields": "Preencha todos os campos",
+    "passwordTooShort": "Senha muito curta",
+    "emailInvalid": "E-mail inválido",
+    "passwordsNotMatch": "Senhas não coincidem",
+    "registerPrompt": "Ainda não possui Conta? Junte-se a Nós!",
+    "forgotPassword": "Esqueceu sua senha? Clique aqui."
+  },
+  "language": {
+    "select": "Selecionar Idioma",
+    "current": "Idioma Atual",
+    "portuguese": "Português",
+    "english": "English",
+    "spanish": "Español"
+  },
+  "settings": {
+    "title": "Configurações",
+    "language": "Idioma",
+    "notifications": "Notificações",
+    "darkMode": "Modo Escuro",
+    "about": "Sobre",
+    "version": "Versão",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfUse": "Termos de Uso"
+  },
+  "footer": {
+    "copyright": "© 2025 Marka",
+    "rightsReserved": "Direitos Reservados",
+    "blueDelivery": "Blue Delivery"
+  }
+}

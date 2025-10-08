@@ -1,5 +1,6 @@
 /* 
 * src/pages/User/index.js
+* Blue Delivery - Perfil do usuário com i18n
 */
 
 import React, { useState, useContext } from 'react';
@@ -8,6 +9,7 @@ import { Feather } from '@expo/vector-icons';
 import { ScrollView } from 'react-native-gesture-handler';
 import { MaskedTextInput } from 'react-native-mask-text';
 import { useNavigation } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
 import { AuthContext } from '../../contexts/AuthContext';
 
 import CameraModal from '../../components/CameraModal';
@@ -17,6 +19,7 @@ import noImage from '../../../assets/noImage.png';
 import api from '../../config/apiAxios';
 
 export default function Perfil() {
+  const { t } = useTranslation();
   const navigation = useNavigation();
   const { user, setUser, signOut } = useContext(AuthContext);
   const [visible, setVisible] = useState(false);
@@ -97,11 +100,11 @@ export default function Perfil() {
           </View>
 
           <View style={styles.areaInput}>
-            <Text style={styles.label}>ID (Ficha Nº):</Text>
+            <Text style={styles.label}>{t('user.userId')} ({t('user.userId')} Nº):</Text>
             <TextInput
               value={String(user?.USER_ID)}
               placeholder={String(user?.USER_ID)}
-              style={[styles.input, { backgroundColor: '#EEE', color: 'red' }]}
+              style={[styles.input, { backgroundColor: '#EEE', color: '#0033CC' }]}
               editable={false}
               selectTextOnFocus={false}
             />
@@ -109,10 +112,10 @@ export default function Perfil() {
 
           <View style={styles.rowInput}>
             <View style={[styles.areaInput, { flex: 1, marginRight: 6 }]}>
-              <Text style={styles.label}>Nome:</Text>
+              <Text style={styles.label}>{t('user.name')}:</Text>
               <TextInput
                 value={nome}
-                placeholder="Nome"
+                placeholder={t('user.name')}
                 autoCorrect={false}
                 onChangeText={setNome}
                 autoCapitalize="words"
@@ -122,10 +125,10 @@ export default function Perfil() {
             </View>
 
             <View style={[styles.areaInput, { flex: 1, marginLeft: 6 }]}>
-              <Text style={styles.label}>Sobrenome:</Text>
+              <Text style={styles.label}>{t('user.lastName')}:</Text>
               <TextInput
                 value={sobrenome}
-                placeholder="Sobrenome"
+                placeholder={t('user.lastName')}
                 onChangeText={setSobrenome}
                 autoCapitalize="words"
                 style={styles.input}
@@ -135,7 +138,7 @@ export default function Perfil() {
           </View>
 
           <View style={styles.areaInput}>
-            <Text style={styles.label}>Telefone:</Text>
+            <Text style={styles.label}>{t('user.phone')}:</Text>
             <MaskedTextInput
               value={telefone}
               mask="(99) 99999-9999"
@@ -148,7 +151,7 @@ export default function Perfil() {
           </View>
 
           <View style={styles.areaInput}>
-            <Text style={styles.label}>Email:</Text>
+            <Text style={styles.label}>{t('user.email')}:</Text>
             <TextInput
               value={email}
               onChangeText={setEmail}
@@ -162,11 +165,11 @@ export default function Perfil() {
           </View>
 
           <TouchableOpacity style={styles.btnSubmit} onPress={onSave}>
-            <Text style={styles.btnTxt}>ATUALIZAR DADOS</Text>
+            <Text style={styles.btnTxt}>{t('profile.updateData').toUpperCase()}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.btnLogout} onPress={signOut}>
-            <Text style={styles.btnTxt}>FECHAR (LOGOUT)</Text>
+            <Text style={styles.btnTxt}>{t('navigation.logout').toUpperCase()}</Text>
           </TouchableOpacity>
 
         </ScrollView>

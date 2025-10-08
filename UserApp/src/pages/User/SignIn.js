@@ -1,42 +1,46 @@
 /**
  * src/pages/User/SignIn.js
+ * Blue Delivery - Tela de login com sistema i18n
  */
 
 import React, { useState, useContext } from 'react';
 import { SafeAreaView, View, Text, TextInput, Image, TouchableOpacity, ActivityIndicator, Keyboard, Platform, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
 import { AuthContext } from '../../contexts/AuthContext';
+import { useTranslateContext } from '../../contexts/TranslateContext';
 
-import icon from '../../../assets/icon.png';
-import marca from '../../../assets/logomarca.png';
+import logo from '../../../assets/logo.png';
 
 export default function SignIn() {
+  const { t } = useTranslation();
+  const { changeLanguage, getLanguageOptions } = useTranslateContext();
   const navigation = useNavigation();
-  const [ email, setEmail ] = useState('');
-  const [ password, setPassword]  = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const { signIn, loading } = useContext(AuthContext);
+  const languages = getLanguageOptions();
 
   async function handleLogin(email, password) {
     signIn(email, password);
   }
-  
+
   return (
     <SafeAreaView style={styles.background}>
       <View style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : ''} enabled>
 
         <View style={styles.header}>
-          <Image style={styles.logo} source={icon} resizeMode="contain" />
-          <Image style={styles.marca} source={marca} resizeMode="contain" />
-          <Text style={styles.title}>Seja bem vindo!</Text>
-          <Text style={styles.subtitle}>UserApp v3.0</Text>
+          <Image style={styles.logo} source={logo} resizeMode="contain" />
+          <Text style={styles.title}>{t('welcome.title')}</Text>
+          <Text style={styles.subtitle}>UserApp v1.0</Text>
         </View>
 
         <View style={styles.areaInput}>
-          <Text style={{marginBottom: 10}}>Email:</Text>
+          <Text style={{ marginBottom: 10 }}>{t('auth.email')}:</Text>
           <TextInput
             value={email}
-            onChangeText={(input)=>setEmail(input)}
+            onChangeText={(input) => setEmail(input)}
             placeholder='username@email.com'
             autoCapitalize='none'
             keyboardType='email-address'
@@ -47,11 +51,11 @@ export default function SignIn() {
         </View>
 
         <View style={styles.areaInput}>
-          <Text style={{marginBottom: 10}}>Senha:</Text>
+          <Text style={{ marginBottom: 10 }}>{t('auth.password')}:</Text>
           <TextInput
             value={password}
-            onChangeText={(input)=>setPassword(input)}
-            placeholder='Senha (6 dígitos numéricos)'
+            onChangeText={(input) => setPassword(input)}
+            placeholder={t('auth.password') + ' (6 dígitos numéricos)'}
             autoCapitalize='none'
             autoCorrect={false}
             secureTextEntry={true}
@@ -62,22 +66,36 @@ export default function SignIn() {
           />
         </View>
 
-        <TouchableOpacity style={styles.btnSubmit} onPress={()=>handleLogin(email, password)}>
+        <TouchableOpacity style={styles.btnSubmit} onPress={() => handleLogin(email, password)}>
           {loading ? (
             <View style={styles.indicator}>
-              <Text style={styles.btnTxt}>Aguarde... </Text>
+              <Text style={styles.btnTxt}>{t('common.loading')} </Text>
               <ActivityIndicator size="large" color='#FFF999' />
-            </View> 
+            </View>
           ) : (
-            <Text style={styles.btnTxt}> ACESSAR </Text>
+            <Text style={styles.btnTxt}>{t('auth.login').toUpperCase()}</Text>
           )}
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.link} onPress={()=>navigation.navigate('SignUp1')}>
-          <Text style={styles.linkTxt}>Ainda não possui Conta? Junte-se a Nós!</Text>
+        {/* Seletor discreto de idiomas - apenas bandeiras */}
+        <View style={styles.flagSelector}>
+          {languages.map((lang) => (
+            <TouchableOpacity
+              key={lang.code}
+              style={styles.flagButton}
+              onPress={() => changeLanguage(lang.code)}
+              activeOpacity={0.7}
+            >
+              <Text style={styles.flagEmoji}>{lang.flag}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+
+        <TouchableOpacity style={styles.link} onPress={() => navigation.navigate('SignUp1')}>
+          <Text style={styles.linkTxt}>{t('messages.registerPrompt')}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.link} onPress={()=>navigation.navigate('Reset')}>
-          <Text style={styles.linkTxt}>Esqueceu sua senha? Clique aqui.</Text>
+        <TouchableOpacity style={styles.link} onPress={() => navigation.navigate('Reset')}>
+          <Text style={styles.linkTxt}>{t('messages.forgotPassword')}</Text>
         </TouchableOpacity>
 
       </View>
@@ -90,43 +108,43 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
-    flex: 1, 
-    justifyContent: 'center', 
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
     margin: 10
   },
   header: {
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center',
   },
-  title:{ 
+  title: {
     color: '#000',
     textAlign: "center",
     fontWeight: 'bold',
     fontSize: 21,
   },
-  subtitle:{
+  subtitle: {
     color: '#000',
     textAlign: "center",
     fontSize: 15,
   },
-  logo:{
-    width: 100, 
-    height: 100
+  logo: {
+    width: 200,
+    height: 200
   },
-  marca:{
-    width: 200, 
+  marca: {
+    width: 200,
     height: 70,
     marginBottom: 15
   },
-  areaInput:{
+  areaInput: {
     width: "100%",
     justifyContent: "center",
     alignItems: "flex-start",
     marginLeft: 10,
     marginBottom: 10
   },
-  input:{
+  input: {
     width: "95%",
     height: 50,
     backgroundColor: "#FFF",
@@ -137,7 +155,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: "#000",
   },
-  btnSubmit:{
+  btnSubmit: {
     width: "95%",
     height: 45,
     flexDirection: "row",
@@ -147,23 +165,56 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 10,
   },
-  btnTxt:{
-    color: "#FFF", 
+  btnTxt: {
+    color: "#FFF",
     fontSize: 20,
-    textAlign: "center", 
+    textAlign: "center",
   },
   link: {
     marginTop: 10,
   },
-  linkTxt:{
+  linkTxt: {
     textAlign: "center",
     color: "#000",
   },
-  indicator:{
-    flex:1, 
+  indicator: {
+    flex: 1,
     flexDirection: 'row',
-    position: 'absolute', 
+    position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center'
-  }
+  },
+  // Seletor discreto de idiomas - apenas bandeiras
+  flagSelector: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 15,
+    marginBottom: 10,
+    paddingHorizontal: 20,
+    gap: 20,
+  },
+  flagButton: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#F8F8F8',
+    borderWidth: 2,
+    borderColor: '#E0E0E0',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    elevation: 3,
+  },
+  flagEmoji: {
+    fontSize: 28,
+    textAlign: 'center',
+    lineHeight: 32,
+  },
 })

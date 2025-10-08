@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "title": "Welcome!",
+    "subtitle": "Blue Delivery - UserApp"
+  },
+  "navigation": {
+    "home": "Home",
+    "categories": "Categories",
+    "deliveries": "Deliveries",
+    "orders": "My Orders",
+    "profile": "Profile",
+    "cart": "Cart",
+    "logout": "Logout (Close)",
+    "closeMenu": "Close This Menu"
+  },
+  "tabs": {
+    "deliveries": "Deliveries",
+    "myOrders": "My Orders",
+    "profile": "Profile"
+  },
+  "headers": {
+    "delivery": "Blue Delivery v1.0",
+    "deliveriesList": "Deliveries List",
+    "deliveryInfo": "Delivery Info",
+    "myOrders": "My Orders",
+    "orderDetails": "Order Details",
+    "userData": "User Data"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "name": "Name",
+    "lastName": "Last Name",
+    "phone": "Phone"
+  },
+  "user": {
+    "welcome": "Welcome!",
+    "userId": "UserID",
+    "myData": "My Data",
+    "profile": "Profile",
+    "name": "Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone"
+  },
+  "profile": {
+    "updateData": "Update Data"
+  },
+  "orders": {
+    "title": "My Orders",
+    "empty": "No orders found",
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "preparing": "Preparing",
+      "ready": "Ready",
+      "delivering": "Delivering",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    }
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Cart is empty",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "delivery": "Delivery",
+    "checkout": "Checkout",
+    "clear": "Clear Cart"
+  },
+  "product": {
+    "price": "Price",
+    "description": "Description",
+    "addToCart": "Add to Cart",
+    "quantity": "Quantity",
+    "extras": "Extras"
+  },
+  "delivery": {
+    "info": "Delivery Information",
+    "menu": "Menu",
+    "contact": "Contact",
+    "address": "Address",
+    "phone": "Phone",
+    "workingHours": "Working Hours",
+    "deliveryFee": "Delivery Fee",
+    "minimumOrder": "Minimum Order"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "add": "Add",
+    "remove": "Remove",
+    "close": "Close",
+    "open": "Open",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK"
+  },
+  "messages": {
+    "welcomeBack": "Welcome back!",
+    "loginSuccess": "Login successful",
+    "loginError": "Login error",
+    "logoutSuccess": "Logout successful",
+    "networkError": "Connection error",
+    "serverError": "Server error",
+    "invalidCredentials": "Invalid credentials",
+    "fillAllFields": "Fill all fields",
+    "passwordTooShort": "Password too short",
+    "emailInvalid": "Invalid email",
+    "passwordsNotMatch": "Passwords don't match",
+    "registerPrompt": "Don't have an account? Join us!",
+    "forgotPassword": "Forgot your password? Click here."
+  },
+  "language": {
+    "select": "Select Language",
+    "current": "Current Language",
+    "portuguese": "Português",
+    "english": "English",
+    "spanish": "Español"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "notifications": "Notifications",
+    "darkMode": "Dark Mode",
+    "about": "About",
+    "version": "Version",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use"
+  },
+  "footer": {
+    "copyright": "© 2025 Marka",
+    "rightsReserved": "All Rights Reserved",
+    "blueDelivery": "Blue Delivery"
+  }
+}
