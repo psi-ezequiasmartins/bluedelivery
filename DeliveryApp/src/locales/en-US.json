@@ -225,15 +225,76 @@
     },
     "products": {
       "title": "PRODUCT MANAGEMENT",
-      "add": "ADD",
-      "edit": "EDIT",
-      "delete": "DELETE",
-      "name": "Product Name",
-      "description": "Description",
-      "price": "Unit Price",
-      "image": "Image",
-      "extras": "Allow Extras",
-      "observations": "Allow Observations"
+      "page_title": "Product Registration",
+      "new_product": "NEW PRODUCT",
+      "edit_product": "EDIT PRODUCT",
+      "pdf": "PDF",
+      "search_placeholder": "Product",
+      "no_products": "No products registered for this delivery.",
+      "error_loading": "Error loading products.",
+      "table": {
+        "id": "ID",
+        "image": "IMAGE",
+        "product": "PRODUCT",
+        "unit_price": "UNIT PRICE",
+        "actions": "ACTIONS"
+      },
+      "form": {
+        "new_title": "NEW PRODUCT",
+        "edit_title": "EDIT PRODUCT",
+        "product_name": "Product Name",
+        "description": "Description",
+        "unit_price": "Unit Price",
+        "product_image": "Product Image",
+        "add_image": "ADD IMAGE",
+        "change_image": "CHANGE IMAGE",
+        "remove_image": "REMOVE",
+        "extras_question": "List extra items? (if available for this product)",
+        "observations_question": "Add observations for this product in the order?",
+        "yes": "Yes",
+        "no": "No",
+        "cancel": "CANCEL",
+        "save": "SAVE",
+        "close": "Close"
+      },
+      "messages": {
+        "name_required": "Please fill in the Product Name field.",
+        "id_error": "Error: Product ID not found. Please select a product to edit.",
+        "created_success": "Product successfully registered!",
+        "updated_success": "Product successfully updated!",
+        "deleted_success": "Product successfully deleted!",
+        "not_found": "Product not found.",
+        "load_error": "Error loading product: "
+      },
+      "delete": {
+        "title": "Deletion",
+        "confirm": "Confirm deletion of {{product}} ?",
+        "deleted_title": "Deleted!",
+        "deleted_text": "Product removed.",
+        "cancelled_title": "Cancelled",
+        "cancelled_text": "Product deletion was cancelled."
+      },
+      "image_upload": {
+        "select_title": "Select the image:",
+        "select_new_title": "Select the product image:",
+        "upload_success": "Image uploaded successfully!",
+        "image_loaded": "Image loaded!",
+        "image_loaded_text": "Image selected successfully. Now click SAVE to register the product.",
+        "upload_error": "Error",
+        "upload_error_text": "Image upload failed.",
+        "send": "SEND"
+      },
+      "pdf_generation": {
+        "no_products_title": "Warning",
+        "no_products_text": "No open orders available to generate the PDF.",
+        "error_title": "Error",
+        "error_text": "Could not generate PDF. Please try again later."
+      },
+      "tooltips": {
+        "edit": "EDIT PRODUCT",
+        "upload_image": "UPLOAD IMAGE",
+        "delete": "DELETE PRODUCT"
+      }
     },
     "extras": {
       "title": "Extra Items",

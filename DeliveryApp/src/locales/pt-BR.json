@@ -225,15 +225,76 @@
     },
     "products": {
       "title": "GESTÃO DE PRODUTOS",
-      "add": "ADICIONAR",
-      "edit": "EDITAR",
-      "delete": "EXCLUIR",
-      "name": "Nome do Produto",
-      "description": "Descrição",
-      "price": "Preço Unitário",
-      "image": "Imagem",
-      "extras": "Permite Acréscimos",
-      "observations": "Permite Observações"
+      "page_title": "Cadastro de Produtos",
+      "new_product": "NOVO PRODUTO",
+      "edit_product": "EDITAR PRODUTO",
+      "pdf": "PDF",
+      "search_placeholder": "Produto",
+      "no_products": "Nenhum produto cadastrado para este delivery.",
+      "error_loading": "Erro ao carregar produtos.",
+      "table": {
+        "id": "ID",
+        "image": "IMAGEM",
+        "product": "PRODUTO",
+        "unit_price": "VALOR UN.",
+        "actions": "AÇÕES"
+      },
+      "form": {
+        "new_title": "NOVO PRODUTO",
+        "edit_title": "EDITAR PRODUTO",
+        "product_name": "Nome do Produto",
+        "description": "Descrição",
+        "unit_price": "Valor Unitário",
+        "product_image": "Imagem do Produto",
+        "add_image": "ADICIONAR IMAGEM",
+        "change_image": "ALTERAR IMAGEM",
+        "remove_image": "REMOVER",
+        "extras_question": "Listar itens extras? (se houver para este produto)",
+        "observations_question": "Acrescentar obs. p/ este produto no pedido?",
+        "yes": "Sim",
+        "no": "Não",
+        "cancel": "CANCELAR",
+        "save": "SALVAR",
+        "close": "Fechar"
+      },
+      "messages": {
+        "name_required": "Favor preencher o campo Nome do Produto.",
+        "id_error": "Erro: ID do produto não encontrado. Selecione um produto para editar.",
+        "created_success": "Produto cadastrado com sucesso!",
+        "updated_success": "Produto atualizado com sucesso!",
+        "deleted_success": "Produto excluído com sucesso!",
+        "not_found": "Produto não encontrado.",
+        "load_error": "Erro ao carregar produto: "
+      },
+      "delete": {
+        "title": "Exclusão",
+        "confirm": "Confirma excluir {{product}} ?",
+        "deleted_title": "Excluído!",
+        "deleted_text": "Produto removido.",
+        "cancelled_title": "Cancelado",
+        "cancelled_text": "A exclusão do produto foi cancelada."
+      },
+      "image_upload": {
+        "select_title": "Selecione a imagem:",
+        "select_new_title": "Selecione a imagem do produto:",
+        "upload_success": "Imagem enviada com sucesso!",
+        "image_loaded": "Imagem carregada!",
+        "image_loaded_text": "Imagem selecionada com sucesso. Agora clique em SALVAR para cadastrar o produto.",
+        "upload_error": "Erro",
+        "upload_error_text": "Falha no upload da imagem.",
+        "send": "ENVIAR"
+      },
+      "pdf_generation": {
+        "no_products_title": "Aviso",
+        "no_products_text": "Nenhum pedido em aberto disponível para gerar o PDF.",
+        "error_title": "Erro",
+        "error_text": "Não foi possível gerar o PDF. Tente novamente mais tarde."
+      },
+      "tooltips": {
+        "edit": "EDITAR PRODUTO",
+        "upload_image": "UPLOAD DE IMAGEM",
+        "delete": "EXCLUIR PRODUTO"
+      }
     },
     "extras": {
       "title": "Itens de Acréscimo",

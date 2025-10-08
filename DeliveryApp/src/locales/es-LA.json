@@ -225,15 +225,76 @@
     },
     "products": {
       "title": "GESTIÓN DE PRODUCTOS",
-      "add": "AGREGAR",
-      "edit": "EDITAR",
-      "delete": "ELIMINAR",
-      "name": "Nombre del Producto",
-      "description": "Descripción",
-      "price": "Precio Unitario",
-      "image": "Imagen",
-      "extras": "Permitir Extras",
-      "observations": "Permitir Observaciones"
+      "page_title": "Registro de Productos",
+      "new_product": "NUEVO PRODUCTO",
+      "edit_product": "EDITAR PRODUCTO",
+      "pdf": "PDF",
+      "search_placeholder": "Producto",
+      "no_products": "No hay productos registrados para este delivery.",
+      "error_loading": "Error al cargar productos.",
+      "table": {
+        "id": "ID",
+        "image": "IMAGEN",
+        "product": "PRODUCTO",
+        "unit_price": "PRECIO UNIT.",
+        "actions": "ACCIONES"
+      },
+      "form": {
+        "new_title": "NUEVO PRODUCTO",
+        "edit_title": "EDITAR PRODUCTO",
+        "product_name": "Nombre del Producto",
+        "description": "Descripción",
+        "unit_price": "Precio Unitario",
+        "product_image": "Imagen del Producto",
+        "add_image": "AGREGAR IMAGEN",
+        "change_image": "CAMBIAR IMAGEN",
+        "remove_image": "ELIMINAR",
+        "extras_question": "¿Listar artículos extras? (si los hay para este producto)",
+        "observations_question": "¿Agregar observaciones para este producto en el pedido?",
+        "yes": "Sí",
+        "no": "No",
+        "cancel": "CANCELAR",
+        "save": "GUARDAR",
+        "close": "Cerrar"
+      },
+      "messages": {
+        "name_required": "Por favor complete el campo Nombre del Producto.",
+        "id_error": "Error: ID del producto no encontrado. Seleccione un producto para editar.",
+        "created_success": "¡Producto registrado exitosamente!",
+        "updated_success": "¡Producto actualizado exitosamente!",
+        "deleted_success": "¡Producto eliminado exitosamente!",
+        "not_found": "Producto no encontrado.",
+        "load_error": "Error al cargar producto: "
+      },
+      "delete": {
+        "title": "Eliminación",
+        "confirm": "¿Confirma eliminar {{product}} ?",
+        "deleted_title": "¡Eliminado!",
+        "deleted_text": "Producto eliminado.",
+        "cancelled_title": "Cancelado",
+        "cancelled_text": "La eliminación del producto fue cancelada."
+      },
+      "image_upload": {
+        "select_title": "Seleccione la imagen:",
+        "select_new_title": "Seleccione la imagen del producto:",
+        "upload_success": "¡Imagen enviada exitosamente!",
+        "image_loaded": "¡Imagen cargada!",
+        "image_loaded_text": "Imagen seleccionada exitosamente. Ahora haga clic en GUARDAR para registrar el producto.",
+        "upload_error": "Error",
+        "upload_error_text": "Falla en la carga de la imagen.",
+        "send": "ENVIAR"
+      },
+      "pdf_generation": {
+        "no_products_title": "Aviso",
+        "no_products_text": "No hay pedidos abiertos disponibles para generar el PDF.",
+        "error_title": "Error",
+        "error_text": "No se pudo generar el PDF. Intente nuevamente más tarde."
+      },
+      "tooltips": {
+        "edit": "EDITAR PRODUCTO",
+        "upload_image": "SUBIR IMAGEN",
+        "delete": "ELIMINAR PRODUCTO"
+      }
     },
     "extras": {
       "title": "Artículos Adicionales",
