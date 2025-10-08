@@ -61,7 +61,7 @@ export default function Novo() {
         {msg.length > 0 ? <div className="alert alert-danger mt-2" role="alert">{msg}</div> : null}
 
         {result === 'S' ? <Navigate to="/app/pedidos" /> : null}
-        <p>&copy; 1999-{ano} {t('app.register.copyright')}</p>
+        <small>&copy; {ano} {t('app.login.copyright')}</small>
       </form>
       {loading && <Loading />}
     </div>

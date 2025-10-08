@@ -17,6 +17,8 @@ import './index.css';
 
 import SessionTimeout from '../session/SessionTimeOFF.jsx';
 
+var ano = new Date().getFullYear();
+
 export default function Menu(props) {
   const { t } = useTranslation();
   const { signOut } = useContext(AuthContext);
@@ -68,18 +70,6 @@ export default function Menu(props) {
           {!isTabbar && <span className="ms-1 d-none d-sm-inline">{t('app.menu.delivery')}</span>}
         </Link>
       </li>
-      {/* <li className={`nav-item ${isTabbar ? 'text-center' : ''}`}>
-        <Link to="/app/cheques" className={props.page === "cheques" ? activeLink : inactiveLink}>
-          <FaMoneyCheck size={24} className="icon" />
-          {!isTabbar && <span className="ms-1 d-none d-sm-inline">Cheques</span>}
-        </Link>
-      </li>
-      <li className={`nav-item ${isTabbar ? 'text-center' : ''}`}>
-        <Link to="/app/recibos" className={props.page === "recibos" ? activeLink : inactiveLink}>
-          <FaMoneyCheck size={24} className="icon" />
-          {!isTabbar && <span className="ms-1 d-none d-sm-inline">Recibos</span>}
-        </Link>
-      </li> */}
       <hr className={!isTabbar ? '' : 'd-none'} />
       <li className={`nav-item ${isTabbar ? 'text-center' : ''}`}>
         <Link to="/" onClick={handleLogout} className={props.page === "Logout" ? activeLink : inactiveLink}>
@@ -92,6 +82,13 @@ export default function Menu(props) {
           <LanguageSelector isMobile={false} />
         </li>
       )}
+      {isTabbar && (
+        <li className="nav-item mt-1" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <LanguageSelector isMobile={true} />
+        </li>
+      )}
+      <small>&copy; {ano} {t('app.login.copyright')}</small>
+
     </ul>
   );
 

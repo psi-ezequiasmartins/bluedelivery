@@ -97,7 +97,7 @@ export default function SideBar(props) {
       />
 
       <View style={{ justifyContent: 'center', alignItems: 'center', paddingTop: 10 }}>
-        <Text style={{ color: '#000', fontSize: 18 }}><AntDesign name="copyright" color='#000' size={12} /> 2025 PSI-SOFTWARE</Text>
+        <Text style={{ color: '#000', fontSize: 18 }}><AntDesign name="copyright" color='#000' size={12} /> 2025 Marka</Text>
         <Text style={{ color: '#000', fontSize: 14 }}>Direitos Reservados</Text>
       </View>
 

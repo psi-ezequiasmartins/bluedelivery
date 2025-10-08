@@ -165,7 +165,7 @@
     "rights": "Todos os direitos reservados",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Uso",
-    "company_name": "MARKA GESTÃO DE PROJETOS",
+    "company_name": "Blue Delivery",
     "cnpj": "CNPJ 57.294.418/0001-76",
     "address": "Av. Acadêmico Nilo Figueiredo, 2303 - Joana Darc - Lagoa Santa MG",
     "email": "agenciamarka7@gmail.com",
@@ -180,7 +180,7 @@
       "signin": "ENTRAR",
       "forgot_password": "Esqueci minha senha!",
       "create_account": "Ainda não possui Conta? Junte-se a nós!",
-      "copyright": "PSI-SOFTWARE"
+      "copyright": "Blue Delivery"
     },
     "register": {
       "title": "Novo Usuário",
@@ -190,7 +190,7 @@
       "confirm_password": "Confirme sua Senha",
       "signup": "CADASTRAR ACESSO",
       "already_have_account": "Já tenho uma conta",
-      "copyright": "PSI-SOFTWARE"
+      "copyright": "Blue Delivery"
     },
     "reset": {
       "title": "Recuperar Senha",
@@ -198,7 +198,7 @@
       "send_link": "ENVIAR LINK",
       "back_to_login": "Retornar para o Login",
       "create_account": "Ainda não possui Conta? Junte-se a nós!",
-      "copyright": "PSI-SOFTWARE"
+      "copyright": "Blue Delivery"
     },
     "menu": {
       "orders": "Pedidos",

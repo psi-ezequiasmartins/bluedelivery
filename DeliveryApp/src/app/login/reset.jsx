@@ -37,7 +37,7 @@ export default function Reset() {
 
         {msg.length > 0 ? <div className="alert alert-danger mt-2" role="alert">{msg}</div> : null}
 
-        <p>&copy; 1999-{ano} {t('app.reset.copyright')}</p>
+        <small>&copy; {ano} {t('app.login.copyright')}</small>
       </form>
     </div>
   );

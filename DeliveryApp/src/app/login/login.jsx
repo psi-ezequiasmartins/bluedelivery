@@ -53,7 +53,7 @@ export default function Login() {
         </div>
 
         {msg && <div className="alert alert-danger mt-2" role="alert">{msg}</div>}
-        <p>&copy; 1999-{ano} {t('app.login.copyright')}</p>
+        <small>&copy; {ano} {t('app.login.copyright')}</small>
       </form>
       {loading && (
         <div className="loading-overlay">
