@@ -12,7 +12,9 @@ function Menu() {
 
   return (
     <div>
-      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"
+        style={{ backgroundColor: '#000', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}
+      >
         <div className="container">
 
           <a className="navbar-brand" href="/#">
@@ -43,11 +45,11 @@ function Menu() {
                 <a className="nav-link" aria-current="page" href="#contato">{t('menu.contact')}</a>
               </li>
               {/* Seletor de idiomas no final da navbar */}
-              <li className="nav-item ms-4 d-none d-lg-block d-flex align-items-center">
+              <li className="nav-item ms-4 d-none d-lg-block" style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                 <FlagSelector variant="buttons" />
               </li>
               {/* Seletor dropdown para mobile */}
-              <li className="nav-item ms-2 d-lg-none">
+              <li className="nav-item ms-2 d-lg-none" style={{ display: 'flex', alignItems: 'center' }}>
                 <FlagSelector variant="dropdown" />
               </li>
             </ul>

@@ -37,7 +37,7 @@ i18n
     // Configuração de detecção
     detection: {
       // Ordem de verificação: localStorage -> navegador -> padrão
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['localStorage', 'navigator'],
 
       // Chave no localStorage
       lookupLocalStorage: 'bluedelivery-language',
@@ -47,23 +47,26 @@ i18n
 
       // Mapear idiomas do navegador para nossos códigos
       convertDetectedLanguage: (lng) => {
-        // Mapear códigos comuns para nossos idiomas
+        console.log('🌍 Detectando idioma:', lng);
+
+        // Remover região se existir e pegar apenas o idioma base
+        const baseLang = lng.split('-')[0].toLowerCase();
+
+        // Mapear códigos para nossos idiomas suportados
         const languageMap = {
           'pt': 'pt-BR',
-          'pt-BR': 'pt-BR',
           'en': 'en-US',
-          'en-US': 'en-US',
-          'es': 'es-LA',
-          'es-ES': 'es-LA',
-          'es-AR': 'es-LA',
-          'es-CL': 'es-LA',
-          'es-VE': 'es-LA',
-          'es-UY': 'es-LA',
-          'es-PY': 'es-LA'
+          'es': 'es-LA'
         };
 
-        return languageMap[lng] || 'pt-BR';
-      }
+        const mappedLanguage = languageMap[baseLang] || 'pt-BR';
+        console.log('🔄 Idioma mapeado:', `${lng} -> ${mappedLanguage}`);
+
+        return mappedLanguage;
+      },
+
+      // Evitar conversões desnecessárias se já está correto
+      checkWhitelist: false
     },
 
     interpolation: {
@@ -72,7 +75,25 @@ i18n
     },
 
     // Debug apenas em desenvolvimento
-    debug: process.env.NODE_ENV === 'development'
+    debug: false // Desabilitado para reduzir logs
   });
+
+// Verificação adicional na inicialização - previne loops
+i18n.on('initialized', () => {
+  const savedLanguage = localStorage.getItem('bluedelivery-language');
+  console.log('🔧 i18n inicializado:', {
+    currentLanguage: i18n.language,
+    savedLanguage,
+    supportedLngs: i18n.options.supportedLngs
+  });
+
+  // Só aplicar se for diferente E for um idioma suportado
+  if (savedLanguage &&
+    savedLanguage !== i18n.language &&
+    i18n.options.supportedLngs.includes(savedLanguage)) {
+    console.log('🔄 Aplicando idioma salvo válido:', savedLanguage);
+    i18n.changeLanguage(savedLanguage);
+  }
+});
 
 export default i18n;

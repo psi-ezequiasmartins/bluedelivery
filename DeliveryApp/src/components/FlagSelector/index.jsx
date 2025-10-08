@@ -5,41 +5,48 @@ import 'flag-icons/css/flag-icons.min.css';
 const FlagSelector = ({ variant = 'buttons' }) => {
   const { i18n } = useTranslation();
 
+  // Ordem solicitada: Venezuela → Brasil → Inglaterra
   const languages = [
+    { code: 'es-LA', flagCode: 've', name: 'Español' },
     { code: 'pt-BR', flagCode: 'br', name: 'Português' },
-    { code: 'en-US', flagCode: 'us', name: 'English' },
-    { code: 'es-LA', flagCode: 've', name: 'Español' }
+    { code: 'en-US', flagCode: 'gb', name: 'English' }, // Bandeira UK em vez de US
   ];
 
   const changeLanguage = (languageCode) => {
+    console.log('🚩 FlagSelector mudando idioma para:', languageCode);
+    // Salvar no localStorage com a chave correta
+    localStorage.setItem('bluedelivery-language', languageCode);
+    console.log('💾 Salvo no localStorage:', languageCode);
     i18n.changeLanguage(languageCode);
   };
 
   if (variant === 'buttons') {
     return (
-      <div className="d-flex align-items-center" style={{ gap: '0px' }}>
+      <div className="d-flex align-items-center" style={{ gap: '0px', height: '100%' }}>
         {languages.map((language) => (
           <button
             key={language.code}
             onClick={() => changeLanguage(language.code)}
-            className={`btn btn-sm d-flex align-items-center justify-content-center ${i18n.language === language.code
-              ? 'btn-light'
-              : 'btn-outline-light'
+            className={`btn btn-sm d-flex align-items-center justify-content-center ${i18n.language === language.code ? 'btn-light' : 'btn-outline-light'
               }`}
             style={{
-              width: '22px',
-              height: '18px',
-              padding: '2px',
+              width: '28px',
+              height: '28px',
+              padding: '4px',
+              margin: 'auto 0',
               border: i18n.language === language.code
                 ? '1px solid rgba(255,255,255,0.15)'
                 : '1px solid transparent',
-              borderRadius: '0',
+              borderRadius: '2px',
               transition: 'all 0.2s ease',
               lineHeight: '1',
               backgroundColor: i18n.language === language.code
                 ? 'rgba(255,255,255,0.05)'
                 : 'transparent',
-              boxShadow: 'none'
+              boxShadow: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
             title={language.name}
             onMouseEnter={(e) => {
@@ -58,7 +65,7 @@ const FlagSelector = ({ variant = 'buttons' }) => {
             <span
               className={`fi fi-${language.flagCode}`}
               style={{
-                fontSize: '14px',
+                fontSize: '16px',
                 lineHeight: '1',
                 display: 'block'
               }}

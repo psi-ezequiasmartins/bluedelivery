@@ -10,10 +10,11 @@ import './index.css';
 const LanguageSelector = ({ isMobile = false }) => {
   const { currentLanguage, changeLanguage } = useTranslateContext();
 
+  // Ordem solicitada: Venezuela → Brasil → Inglaterra
   const languages = [
+    { code: 'es-LA', flagCode: 've', name: 'Español' },
     { code: 'pt-BR', flagCode: 'br', name: 'Português' },
-    { code: 'en-US', flagCode: 'us', name: 'English' },
-    { code: 'es-LA', flagCode: 've', name: 'Español' }
+    { code: 'en-US', flagCode: 'gb', name: 'English' }, // Bandeira UK em vez de US
   ];
 
   const handleLanguageChange = (languageCode) => {
@@ -68,18 +69,56 @@ const LanguageSelector = ({ isMobile = false }) => {
           </ul>
         </div>
       ) : (
-        // Versão desktop - botões com bandeiras
-        <div className="language-buttons">
+        // Versão desktop - botões com bandeiras (mesmo estilo da NavBar)
+        <div className="d-flex align-items-center" style={{ gap: '0px', height: '100%' }}>
           {languages.map(lang => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
-              className={`language-btn ${currentLanguage === lang.code ? 'active' : ''}`}
+              className={`btn btn-sm d-flex align-items-center justify-content-center ${currentLanguage === lang.code
+                ? 'btn-light'
+                : 'btn-outline-light'
+                }`}
+              style={{
+                width: '28px',
+                height: '28px',
+                padding: '4px',
+                margin: 'auto 0',
+                border: currentLanguage === lang.code
+                  ? '1px solid rgba(255,255,255,0.15)'
+                  : '1px solid transparent',
+                borderRadius: '2px',
+                transition: 'all 0.2s ease',
+                lineHeight: '1',
+                backgroundColor: currentLanguage === lang.code
+                  ? 'rgba(255,255,255,0.05)'
+                  : 'transparent',
+                boxShadow: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
               title={lang.name}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                e.target.style.borderColor = 'rgba(255,255,255,0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = currentLanguage === lang.code
+                  ? 'rgba(255,255,255,0.05)'
+                  : 'transparent';
+                e.target.style.borderColor = currentLanguage === lang.code
+                  ? 'rgba(255,255,255,0.15)'
+                  : 'transparent';
+              }}
             >
               <span
                 className={`fi fi-${lang.flagCode}`}
-                style={{ fontSize: '14px' }}
+                style={{
+                  fontSize: '16px',
+                  lineHeight: '1',
+                  display: 'block'
+                }}
               ></span>
             </button>
           ))}

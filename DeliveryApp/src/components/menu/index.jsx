@@ -88,7 +88,7 @@ export default function Menu(props) {
         </Link>
       </li>
       {!isTabbar && (
-        <li className="nav-item mt-3">
+        <li className="nav-item mt-3" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <LanguageSelector isMobile={false} />
         </li>
       )}

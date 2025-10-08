@@ -75,3 +75,16 @@
   width: 18px;
   height: 14px;
 }
+
+/* Estilos para o seletor de idiomas na sidebar */
+.sidebar .nav-item .language-selector {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .language-selector .d-flex {
+  justify-content: center;
+  align-items: center;
+}
