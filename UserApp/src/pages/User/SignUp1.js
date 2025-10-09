@@ -3,34 +3,36 @@
  */
 
 import React, { useState } from 'react';
-import { SafeAreaView, View, Image, Text, TextInput, TouchableOpacity, Keyboard, Platform, StyleSheet } from 'react-native';
+import { SafeAreaView, View, Image, Text, TextInput, TouchableOpacity, Keyboard, Platform, StyleSheet, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
 
 import icon from '../../../assets/icon.png';
 import marca from '../../../assets/logomarca.png';
 
 export default function SignUp1() {
   const navigation = useNavigation();
+  const { t } = useTranslation();
 
   const [nome, setNome] = useState('');
   const [sobrenome, setSobrenome] = useState('');
 
-  function checkEmptyField(field){
-    if(field.trim()==='') {
+  function checkEmptyField(field) {
+    if (field.trim() === '') {
       return false;
     } else {
       return true;
     }
   }
 
-  function avancar(){
+  function avancar() {
     const vNome = checkEmptyField(nome);
     const vSobrenome = checkEmptyField(sobrenome);
 
-    if(!vNome || !vSobrenome){
-      alert('Dados obrigatórios');
+    if (!vNome || !vSobrenome) {
+      Alert.alert('', t('signup.requiredFields'));
     } else {
-      navigation.navigate('SignUp2', {nome, sobrenome})
+      navigation.navigate('SignUp2', { nome, sobrenome })
     }
   }
 
@@ -41,29 +43,29 @@ export default function SignUp1() {
         <View style={styles.header}>
           <Image source={icon} style={styles.logo} resizeMode="contain" />
           <Image source={marca} style={styles.marca} resizeMode="contain" />
-          <Text style={styles.title}>Seja bem vindo!</Text>
-          <Text style={styles.subtitle}>Cadastre-se! É simples e rápido.</Text>
+          <Text style={styles.title}>{t('signup.welcome')}</Text>
+          <Text style={styles.subtitle}>{t('signup.subtitle1')}</Text>
         </View>
 
         <View style={styles.areaInput}>
-          <Text style={{marginBottom: 5}}>Nome:</Text>
+          <Text style={{ marginBottom: 5 }}>{t('signup.nameLabel')}</Text>
           <TextInput
             value={nome}
             onChangeText={(input) => setNome(input)}
-            placeholder="Ex.: José"
+            placeholder={t('signup.namePlaceholder')}
             autoCorrect={true}
-            autoCapitalize="setences"
+            autoCapitalize="sentences"
             onSubmitEditing={() => Keyboard.dismiss()}
             style={styles.input}
           />
         </View>
 
         <View style={styles.areaInput}>
-          <Text style={{marginBottom: 5}}>Sobrenome:</Text>
+          <Text style={{ marginBottom: 5 }}>{t('signup.lastNameLabel')}</Text>
           <TextInput
             value={sobrenome}
             onChangeText={(input) => setSobrenome(input)}
-            placeholder="Ex.: Silva"
+            placeholder={t('signup.lastNamePlaceholder')}
             autoCorrect={true}
             autoCapitalize="sentences"
             onSubmitEditing={() => Keyboard.dismiss()}
@@ -72,11 +74,11 @@ export default function SignUp1() {
         </View>
 
         <TouchableOpacity style={styles.btnSubmit} onPress={avancar}>
-          <Text style={styles.btnTxt}> AVANÇAR </Text>
+          <Text style={styles.btnTxt}>{t('signup.advance')}</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.link} onPress={()=>navigation.navigate('SignIn')}>
-          <Text style={styles.linkTxt}>Já tenho uma Conta!</Text>
+        <TouchableOpacity style={styles.link} onPress={() => navigation.navigate('SignIn')}>
+          <Text style={styles.linkTxt}>{t('signup.haveAccount')}</Text>
         </TouchableOpacity>
 
       </View>
@@ -89,43 +91,43 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
-    flex: 1, 
-    justifyContent: 'center', 
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
     margin: 10
   },
   header: {
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center',
   },
-  title:{ 
+  title: {
     color: '#000',
     textAlign: "center",
     fontWeight: 'bold',
     fontSize: 21,
   },
-  subtitle:{
+  subtitle: {
     color: '#000',
     textAlign: "center",
     fontSize: 15,
   },
-  logo:{
-    width: 70, 
+  logo: {
+    width: 70,
     height: 70
   },
-  marca:{
-    width: 200, 
+  marca: {
+    width: 200,
     height: 70,
     marginBottom: 15
   },
-  areaInput:{
+  areaInput: {
     width: "100%",
     justifyContent: "center",
     alignItems: "flex-start",
     marginLeft: 10,
     marginBottom: 10
   },
-  input:{
+  input: {
     width: "95%",
     height: 50,
     backgroundColor: "#FFF",
@@ -136,7 +138,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: "#000",
   },
-  btnSubmit:{
+  btnSubmit: {
     width: "95%",
     height: 45,
     flexDirection: "row",
@@ -146,22 +148,22 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 10,
   },
-  btnTxt:{
-    color: "#FFF", 
+  btnTxt: {
+    color: "#FFF",
     fontSize: 20,
-    textAlign: "center", 
+    textAlign: "center",
   },
   link: {
     marginTop: 10,
   },
-  linkTxt:{
+  linkTxt: {
     textAlign: "center",
     color: "#000",
   },
-  indicator:{
-    flex:1, 
+  indicator: {
+    flex: 1,
     flexDirection: 'row',
-    position: 'absolute', 
+    position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center'
   }

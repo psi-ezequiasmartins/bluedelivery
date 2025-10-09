@@ -7,7 +7,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTranslation } from 'react-i18next';
-import * as Localization from 'expo-localization';
 
 const TranslateContext = createContext();
 
@@ -22,35 +21,8 @@ export const useTranslateContext = () => {
 export const TranslateProvider = ({ children }) => {
   const { i18n } = useTranslation();
 
-  // Detectar idioma do dispositivo ou usar idioma salvo
-  const [currentLanguage, setCurrentLanguage] = useState(() => {
-    // Primeiro tentar detectar o idioma do dispositivo
-    const deviceLanguage = Localization.locale || 'pt-BR';
-    const supportedLanguages = ['pt-BR', 'en-US', 'es-LA'];
-
-    // Mapear códigos do dispositivo para nossos códigos suportados
-    const languageMap = {
-      'pt': 'pt-BR',
-      'pt-BR': 'pt-BR',
-      'en': 'en-US',
-      'en-US': 'en-US',
-      'es': 'es-LA',
-      'es-ES': 'es-LA',
-      'es-LA': 'es-LA',
-    };
-
-    const detectedLanguage = languageMap[deviceLanguage.split('-')[0]] ||
-      languageMap[deviceLanguage] ||
-      'pt-BR';
-
-    console.log('🌐 TranslateContext inicializando:', {
-      deviceLanguage,
-      detectedLanguage,
-      supportedLanguages
-    });
-
-    return detectedLanguage;
-  });
+  // Usar idioma padrão (português) ou idioma salvo
+  const [currentLanguage, setCurrentLanguage] = useState('pt-BR');
 
   const [isLoading, setIsLoading] = useState(true);
 
