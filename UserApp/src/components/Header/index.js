@@ -62,7 +62,7 @@ export default function Header() {
         <TouchableOpacity
           onPress={() => {
             alert('Blue Delivery - UserApp v1.0' + '\n' + '+55 31 98410-7540 ' + '\n' + `pushToken: ${pushToken}`);
-            GoToLink("Home");
+            GoToLink("HomeDrawer");
           }}
         >
           <Image source={icon} style={{ width: 85, height: 85 }} resizeMode="contain" />

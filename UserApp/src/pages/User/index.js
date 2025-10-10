@@ -41,7 +41,7 @@ export default function Perfil() {
   async function onSave() {
     await updateUser();
     if (user && user.USER_ID) {
-      navigation.navigate('Home');
+      navigation.navigate('HomeDrawer');
     } else {
       Alert.alert('Erro', 'Usuário não autenticado.');
     }

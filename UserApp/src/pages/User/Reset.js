@@ -5,6 +5,7 @@
 import React, { useState, useContext } from 'react';
 import { SafeAreaView, View, Text, TextInput, Image, TouchableOpacity, ActivityIndicator, Keyboard, Platform, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
 import { AuthContext } from '../../contexts/AuthContext';
 
 import icon from '../../../assets/icon.png';
@@ -12,9 +13,10 @@ import marca from '../../../assets/logomarca.png';
 
 export default function Reset() {
   const navigation = useNavigation();
+  const { t } = useTranslation();
   const { changePassword, loading } = useContext(AuthContext);
 
-  const [ email, setEmail ] = useState('');
+  const [email, setEmail] = useState('');
 
   return (
     <SafeAreaView style={styles.background}>
@@ -23,16 +25,16 @@ export default function Reset() {
         <View style={styles.header}>
           <Image style={styles.logo} source={icon} resizeMode="contain" />
           <Image style={styles.marca} source={marca} resizeMode="contain" />
-          <Text style={styles.title}>Recuperar Acesso</Text>
-          <Text style={styles.subtitle}>Enviaremos um link de recuperação para o e-mail cadastrado:</Text>
+          <Text style={styles.title}>{t('reset.title')}</Text>
+          <Text style={styles.subtitle}>{t('reset.subtitle')}</Text>
         </View>
 
         <View style={styles.areaInput}>
-          <Text style={{marginBottom: 10}}>Email:</Text>
+          <Text style={{ marginBottom: 10 }}>{t('auth.email')}:</Text>
           <TextInput
             value={email}
-            onChangeText={(input)=>setEmail(input)}
-            placeholder='username@email.com'
+            onChangeText={(input) => setEmail(input)}
+            placeholder={t('auth.emailPlaceholder')}
             autoCapitalize='none'
             keyboardType='email-address'
             textContentType='emailAddress'
@@ -41,23 +43,23 @@ export default function Reset() {
           />
         </View>
 
-        <TouchableOpacity style={styles.btnSubmit} onPress={()=>signIn(email, password)}>
+        <TouchableOpacity style={styles.btnSubmit} onPress={() => signIn(email, password)}>
           {loading ? (
             <View style={styles.indicator}>
-              <Text style={styles.btnTxt}>Aguarde... </Text>
+              <Text style={styles.btnTxt}>{t('common.loading')}... </Text>
               <ActivityIndicator size="large" color='#FFF999' />
-            </View> 
+            </View>
           ) : (
-            <Text style={styles.btnTxt}> ENVIAR LINK </Text>
+            <Text style={styles.btnTxt}>{t('reset.sendLink').toUpperCase()}</Text>
           )}
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.link} onPress={()=>navigation.navigate('SignUp1')}>
-          <Text style={styles.linkTxt}>Ainda não possui Conta? Junte-se a Nós!</Text>
+        <TouchableOpacity style={styles.link} onPress={() => navigation.navigate('SignUp1')}>
+          <Text style={styles.linkTxt}>{t('reset.noAccount')}</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.link} onPress={()=>navigation.navigate('SignIn')}>
-          <Text style={styles.linkTxt}>Retornar para o Login</Text>
+        <TouchableOpacity style={styles.link} onPress={() => navigation.navigate('SignIn')}>
+          <Text style={styles.linkTxt}>{t('reset.backToLogin')}</Text>
         </TouchableOpacity>
 
       </View>
@@ -70,43 +72,43 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
-    flex: 1, 
-    justifyContent: 'center', 
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
     margin: 10
   },
   header: {
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center',
   },
-  title:{ 
+  title: {
     color: '#000',
     textAlign: "center",
     fontWeight: 'bold',
     fontSize: 21,
   },
-  subtitle:{
+  subtitle: {
     color: '#000',
     textAlign: "center",
     fontSize: 15,
   },
-  logo:{
-    width: 100, 
+  logo: {
+    width: 100,
     height: 100
   },
-  marca:{
-    width: 200, 
+  marca: {
+    width: 200,
     height: 70,
     marginBottom: 15
   },
-  areaInput:{
+  areaInput: {
     width: "100%",
     justifyContent: "center",
     alignItems: "flex-start",
     marginLeft: 10,
     marginBottom: 10
   },
-  input:{
+  input: {
     width: "95%",
     height: 50,
     backgroundColor: "#FFF",
@@ -117,7 +119,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: "#000",
   },
-  btnSubmit:{
+  btnSubmit: {
     width: "95%",
     height: 45,
     flexDirection: "row",
@@ -127,23 +129,23 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 10,
   },
-  btnTxt:{
-    color: "#FFF", 
+  btnTxt: {
+    color: "#FFF",
     fontSize: 20,
-    textAlign: "center", 
+    textAlign: "center",
   },
   link: {
     marginTop: 10,
     marginBottom: 10,
   },
-  linkTxt:{
+  linkTxt: {
     textAlign: "center",
     color: "#000",
   },
-  indicator:{
-    flex:1, 
+  indicator: {
+    flex: 1,
     flexDirection: 'row',
-    position: 'absolute', 
+    position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center'
   }

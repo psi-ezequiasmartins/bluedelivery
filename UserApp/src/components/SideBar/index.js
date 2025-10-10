@@ -42,7 +42,7 @@ export default function SideBar(props) {
 
       <DrawerItem
         label={t('navigation.categories').toUpperCase()}
-        onPress={() => GoToLink("HomeStack")}
+        onPress={() => GoToLink("HomeDrawer")}
         activeTintColor='#FFF'
         activeBackgroundColor='#0033CC'
         inactiveTintColor='#000'
@@ -56,7 +56,7 @@ export default function SideBar(props) {
 
       <DrawerItem
         label={t('navigation.orders').toUpperCase()}
-        onPress={() => GoToLink("OrdersStack")}
+        onPress={() => GoToLink("OrdersTab")}
         activeTintColor='#FFF'
         activeBackgroundColor='#0033CC'
         inactiveTintColor='#000'
@@ -70,7 +70,7 @@ export default function SideBar(props) {
 
       <DrawerItem
         label={t('user.myData').toUpperCase()}
-        onPress={() => GoToLink("Profile")}
+        onPress={() => GoToLink("ProfileTab")}
         activeTintColor='#FFF'
         activeBackgroundColor='#0033CC'
         inactiveTintColor='#000'

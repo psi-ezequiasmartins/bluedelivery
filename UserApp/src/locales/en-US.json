@@ -35,7 +35,15 @@
     "confirmPassword": "Confirm Password",
     "name": "Name",
     "lastName": "Last Name",
-    "phone": "Phone"
+    "phone": "Phone",
+    "emailPlaceholder": "username@email.com"
+  },
+  "reset": {
+    "title": "Recover Access",
+    "subtitle": "We'll send a recovery link to your registered email:",
+    "sendLink": "Send Link",
+    "noAccount": "Don't have an account? Join us!",
+    "backToLogin": "Back to Login"
   },
   "signup": {
     "welcome": "Welcome!",

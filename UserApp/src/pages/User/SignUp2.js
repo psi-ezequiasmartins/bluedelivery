@@ -150,7 +150,7 @@ export default function SignUp2(props) {
           </ScrollView>
         </KeyboardAvoidingView>
         <Text style={{ fontSize: 12, textAlign: 'center', margin: 10 }} >
-          (*) Ao clicar em "Registrar Usuário", você estará concordando automaticamente com a nossa Política de Uso e Privacidade. Dúvidas: acesse https://deliverybairro.com
+          (*) Ao clicar em "Registrar Usuário", você estará concordando automaticamente com a nossa Política de Uso e Privacidade. Dúvidas: acesse https://bluedelivery.tech
         </Text>
         <TouchableOpacity style={styles.btnSubmit} onPress={handleSignUp}>
           {loading ? (

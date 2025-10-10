@@ -35,7 +35,15 @@
     "confirmPassword": "Confirmar Senha",
     "name": "Nome",
     "lastName": "Sobrenome",
-    "phone": "Telefone"
+    "phone": "Telefone",
+    "emailPlaceholder": "username@email.com"
+  },
+  "reset": {
+    "title": "Recuperar Acesso",
+    "subtitle": "Enviaremos um link de recuperação para o e-mail cadastrado:",
+    "sendLink": "Enviar Link",
+    "noAccount": "Ainda não possui Conta? Junte-se a Nós!",
+    "backToLogin": "Retornar para o Login"
   },
   "signup": {
     "welcome": "Seja bem vindo!",

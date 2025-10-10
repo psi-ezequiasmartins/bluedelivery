@@ -32,7 +32,7 @@ export default function AppRoutes() {
       >
         <Tab.Screen
           name='Home'
-          component={ Home }
+          component={Home}
           options={{
             tabBarIcon: ({ color, size, focused }) => {
               return <AntDesign name='tags' color={(focused !== true) ? '#5D5D5D' : '#000'} size={35} />
@@ -41,7 +41,7 @@ export default function AppRoutes() {
         />
         <Tab.Screen
           name='Pedidos'
-          component={ OrderStackNavigator }
+          component={OrderStackNavigator}
           options={{
             tabBarIcon: ({ color, size, focused }) => {
               return <Fontisto name='shopping-bag-1' color={(focused !== true) ? '#5D5D5D' : '#000'} size={35} />
@@ -50,7 +50,7 @@ export default function AppRoutes() {
         />
         <Tab.Screen
           name='Perfil'
-          component={ Perfil }
+          component={Perfil}
           options={{
             tabBarIcon: ({ color, size, focused }) => {
               return <FontAwesome5 name='user-cog' color={(focused !== true) ? '#5D5D5D' : '#000'} size={35} />
@@ -65,7 +65,7 @@ export default function AppRoutes() {
 
     const getHeaderTitle = (route) => {
       const routeName = getFocusedRouteNameFromRoute(route) ?? 'Home';
-      switch ( routeName ) {
+      switch (routeName) {
         case 'Home': return 'Mapa de Deliveries';
         case 'Pedidos': return 'Lista de Pedidos';
         case 'Perfil': return 'Dados do Courier';
@@ -98,8 +98,8 @@ export default function AppRoutes() {
         }}
       >
         <Drawer.Screen
-          name="DeliveryBairro.com"
-          component={ TabNavigator }
+          name="Blue Delivery"
+          component={TabNavigator}
           options={({ route }) => ({
             headerTitle: getHeaderTitle(route),
             headerTintColor: '#FFF',
@@ -117,21 +117,21 @@ export default function AppRoutes() {
   }
 
   return (
-    <Stack.Navigator 
-      screenOptions={{ 
-        headerShown: false 
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false
       }}
     >
-      <Stack.Screen 
+      <Stack.Screen
         name="DrawerNavigator"
-        component={ DrawerNavigator }
+        component={DrawerNavigator}
       />
-      <Stack.Screen 
-        name="Deliveries" 
-        component={ Deliveries } 
-        options={{ 
-          headerShown: true, 
-          headerTitle: 'Deliveries por Categoria', 
+      <Stack.Screen
+        name="Deliveries"
+        component={Deliveries}
+        options={{
+          headerShown: true,
+          headerTitle: 'Deliveries por Categoria',
           headerTintColor: '#FFF',
           headerStyle: {
             backgroundColor: '#000',
@@ -174,14 +174,14 @@ const OrdersStack = createStackNavigator();
 const OrderStackNavigator = () => {
   return (
     <OrdersStack.Navigator screenOptions={{ headerShown: false }}>
-      <OrdersStack.Screen 
-        name="StkPedidos" 
-        component={ Pedidos } 
+      <OrdersStack.Screen
+        name="StkPedidos"
+        component={Pedidos}
         screenOptions={{ headerShown: false }}
       />
       <OrdersStack.Screen
         name="StkPedido"
-        component={ OrderDetailsNavigator }
+        component={OrderDetailsNavigator}
         screenOptions={{ headerShown: false }}
       />
     </OrdersStack.Navigator>

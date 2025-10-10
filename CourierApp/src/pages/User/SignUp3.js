@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, { useState, useContext } from 'react';
 import { SafeAreaView, View, Image, Text, TextInput, TouchableOpacity, ActivityIndicator, Keyboard, Platform, StyleSheet } from 'react-native';
 import { TextInputMask } from 'react-native-masked-text';
 import { useNavigation } from '@react-navigation/native';
@@ -24,20 +24,20 @@ export default function SignUp3(props) {
 
   const { signUp, loading } = useContext(AuthContext);
 
-  function checkEmptyField(field){
-    if(field.trim()==='') {
+  function checkEmptyField(field) {
+    if (field.trim() === '') {
       return false;
     } else {
       return true;
     }
   }
 
-  function AddNewUser(){
+  function AddNewUser() {
     const vTelefone = checkEmptyField(telefone);
     const vEmail = checkEmptyField(email);
     const vPassword = checkEmptyField(password);
 
-    if(!vTelefone || !vEmail || !vPassword) {
+    if (!vTelefone || !vEmail || !vPassword) {
       alert('Dados obrigatórios');
     } else {
       signUp(
@@ -66,7 +66,7 @@ export default function SignUp3(props) {
         </View>
 
         <View style={styles.areaInput}>
-          <Text style={{marginBottom: 5}}>Telefone:</Text>
+          <Text style={{ marginBottom: 5 }}>Telefone:</Text>
           <TextInputMask
             type={'custom'}
             options={{
@@ -74,17 +74,17 @@ export default function SignUp3(props) {
             }}
             value={telefone}
             placeholder="Ex.: (31) 99999-9999"
-            onChangeText={ (input) => setTelefone(input) }
+            onChangeText={(input) => setTelefone(input)}
             keyboardType="numeric"
             style={styles.input}
           />
         </View>
 
         <View style={styles.areaInput}>
-          <Text style={{marginBottom: 5}}>Email:</Text>
+          <Text style={{ marginBottom: 5 }}>Email:</Text>
           <TextInput
             value={email}
-            onChangeText={(input)=>setEmail(input)}
+            onChangeText={(input) => setEmail(input)}
             placeholder='Ex.: username@email.com'
             autoCapitalize='none'
             keyboardType='email-address'
@@ -95,10 +95,10 @@ export default function SignUp3(props) {
         </View>
 
         <View style={styles.areaInput}>
-          <Text style={{marginBottom: 5}}>Senha:</Text>
+          <Text style={{ marginBottom: 5 }}>Senha:</Text>
           <TextInput
             value={password}
-            onChangeText={(input)=>setPassword(input)}
+            onChangeText={(input) => setPassword(input)}
             placeholder='999999'
             autoCapitalize='none'
             autoCorrect={false}
@@ -110,8 +110,8 @@ export default function SignUp3(props) {
           />
         </View>
 
-        <Text style={{fontSize: 12, textAlign: 'center', margin: 10}} >
-          (*) Ao clicar em "Registrar Usuário", você estará concordando automaticamente com a nossa Política de Uso e Privacidade. Dúvidas: acesse https://deliverybairro.com
+        <Text style={{ fontSize: 12, textAlign: 'center', margin: 10 }} >
+          (*) Ao clicar em "Registrar Usuário", você estará concordando automaticamente com a nossa Política de Uso e Privacidade. Dúvidas: acesse https://bluedelivery.tech
         </Text>
 
         <TouchableOpacity style={styles.btnSubmit} onPress={AddNewUser}>
@@ -119,17 +119,17 @@ export default function SignUp3(props) {
             <View style={styles.indicator}>
               <Text style={styles.btnTxt}>Aguarde... </Text>
               <ActivityIndicator size="large" color='#FFF' />
-            </View> 
+            </View>
           ) : (
             <Text style={styles.btnTxt}> REGISTRAR USUÁRIO </Text>
           )}
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.btnSubmit} onPress={()=>navigation.navigate('SignUp2')}>
+        <TouchableOpacity style={styles.btnSubmit} onPress={() => navigation.navigate('SignUp2')}>
           <Text style={styles.btnTxt}> VOLTAR </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.link} onPress={()=>navigation.navigate('SignIn')}>
+        <TouchableOpacity style={styles.link} onPress={() => navigation.navigate('SignIn')}>
           <Text style={styles.linkTxt}>Já tenho uma Conta!</Text>
         </TouchableOpacity>
 
@@ -143,42 +143,42 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
-    flex: 1, 
-    justifyContent: 'center', 
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
     margin: 10
   },
   header: {
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center',
   },
-  title:{ 
+  title: {
     color: '#000',
     textAlign: "center",
     fontWeight: 'bold',
     fontSize: 21,
   },
-  subtitle:{
+  subtitle: {
     color: '#000',
     textAlign: "center",
     fontSize: 15,
   },
-  logo:{
-    width: 100, 
+  logo: {
+    width: 100,
     height: 100
   },
-  marca:{
-    width: 200, 
+  marca: {
+    width: 200,
     height: 70,
     marginBottom: 15
   },
-  areaInput:{
+  areaInput: {
     width: "100%",
     justifyContent: "center",
     alignItems: "flex-start",
     margin: 5,
   },
-  input:{
+  input: {
     width: "95%",
     height: 50,
     backgroundColor: "#FFF",
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: "#000",
   },
-  btnSubmit:{
+  btnSubmit: {
     width: "95%",
     height: 45,
     flexDirection: "row",
@@ -199,23 +199,23 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 10,
   },
-  btnTxt:{
-    color: "#FFF", 
+  btnTxt: {
+    color: "#FFF",
     fontSize: 20,
-    textAlign: "center", 
+    textAlign: "center",
   },
   link: {
     marginTop: 10,
     marginBottom: 10,
   },
-  linkTxt:{
+  linkTxt: {
     textAlign: "center",
     color: "#000",
   },
-  indicator:{
-    flex:1, 
+  indicator: {
+    flex: 1,
     flexDirection: 'row',
-    position: 'absolute', 
+    position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center'
   }

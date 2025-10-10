@@ -35,7 +35,15 @@
     "confirmPassword": "Confirmar Contraseña",
     "name": "Nombre",
     "lastName": "Apellido",
-    "phone": "Teléfono"
+    "phone": "Teléfono",
+    "emailPlaceholder": "usuario@correo.com"
+  },
+  "reset": {
+    "title": "Recuperar Acceso",
+    "subtitle": "Enviaremos un enlace de recuperación al correo registrado:",
+    "sendLink": "Enviar Enlace",
+    "noAccount": "¿Aún no tienes cuenta? ¡Únete a nosotros!",
+    "backToLogin": "Volver al Login"
   },
   "signup": {
     "welcome": "¡Bienvenido!",
