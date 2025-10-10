@@ -154,7 +154,7 @@
     "logoutSuccess": "Logout realizado com sucesso",
     "networkError": "Erro de conexão",
     "serverError": "Erro no servidor",
-    "invalidCredentials": "Credenciais inválidas",
+    "invalidCredentials": "Email e/ou Senha inválidos ou erro na autenticação",
     "fillAllFields": "Preencha todos os campos",
     "passwordTooShort": "Senha muito curta",
     "emailInvalid": "E-mail inválido",

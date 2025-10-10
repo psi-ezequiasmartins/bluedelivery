@@ -8,11 +8,13 @@ import { Alert } from 'react-native';
 import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useTranslation } from 'react-i18next';
 import api from '../config/apiAxios';
 
 export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
+  const { t } = useTranslation();
   const db = getDatabase(firebase_app);
   const [loading, setLoading] = useState(false);
   const [authenticated, setAuthenticated] = useState(false);
@@ -99,7 +101,7 @@ export function AuthProvider({ children }) {
       setAuthenticated(true);
     } catch (error) {
       console.error('Erro no login:', error);
-      Alert.alert('Email e/ou Senha inválidos ou erro na autenticação.');
+      Alert.alert(t('common.error'), t('messages.invalidCredentials'));
       setAuthenticated(false);
     } finally {
       setLoading(false);
