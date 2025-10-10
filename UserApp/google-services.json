@@ -1,22 +1,22 @@
 {
   "project_info": {
-    "project_number": "234983243246",
-    "firebase_url": "https://psi-deliverybairro-default-rtdb.firebaseio.com",
-    "project_id": "psi-deliverybairro",
-    "storage_bucket": "psi-deliverybairro.firebasestorage.app"
+    "project_number": "396725346227",
+    "firebase_url": "https://blue-delivery-708c1-default-rtdb.firebaseio.com",
+    "project_id": "blue-delivery-708c1",
+    "storage_bucket": "blue-delivery-708c1.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:234983243246:android:12c7a181d47dcdc492a2ff",
+        "mobilesdk_app_id": "1:396725346227:android:17cf77855d782dca1335c6",
         "android_client_info": {
-          "package_name": "com.deliverybairro.userapp"
+          "package_name": "com.bluedelivery.userapp"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB1Ytj8gWwM_JFpZZQyhcverYdGH6QK55A"
+          "current_key": "AIzaSyAoSmfKLDsmtos0_dVqh0NHHhB3G-p9qb4"
         }
       ],
       "services": {
